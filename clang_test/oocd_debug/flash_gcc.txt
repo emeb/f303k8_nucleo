@@ -1,0 +1,1816 @@
+===GCC Compiler Detected===
+--->compiler specific cflags is 
+--->cflags is -g -O3 -ffunction-sections -std=gnu99 -Wall -flto -I. -I../CMSIS -I../HAL -I../common -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F303x8 -D'HSE_VALUE=((uint32_t)8000000)' -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mlittle-endian -mthumb
+openocd -d3 -f openocd_stlink.cfg -c "program main.elf verify reset exit"
+Open On-Chip Debugger 0.10.0+dev-01517-g7b641d3d4-dirty (2020-12-05-12:39)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+User : 13 1 options.c:63 configuration_output_handler(): debug_level: 3
+User : 14 1 options.c:63 configuration_output_handler(): 
+Debug: 15 1 options.c:244 add_default_dirs(): bindir=/usr/local/bin
+Debug: 16 1 options.c:245 add_default_dirs(): pkgdatadir=/usr/local/share/openocd
+Debug: 17 1 options.c:246 add_default_dirs(): exepath=/usr/local/bin
+Debug: 18 1 options.c:247 add_default_dirs(): bin2data=../share/openocd
+Debug: 19 1 configuration.c:42 add_script_search_dir(): adding /home/ericb/.config/openocd
+Debug: 20 1 configuration.c:42 add_script_search_dir(): adding /home/ericb/.openocd
+Debug: 21 1 configuration.c:42 add_script_search_dir(): adding /usr/local/bin/../share/openocd/site
+Debug: 22 1 configuration.c:42 add_script_search_dir(): adding /usr/local/bin/../share/openocd/scripts
+Debug: 23 1 configuration.c:97 find_file(): found openocd_stlink.cfg
+Debug: 24 1 configuration.c:97 find_file(): found /usr/local/bin/../share/openocd/scripts/interface/stlink.cfg
+Debug: 25 1 command.c:146 script_debug(): command - adapter driver hla
+Debug: 27 1 command.c:146 script_debug(): command - hla_layout stlink
+Debug: 29 1 hla_interface.c:242 hl_interface_handle_layout_command(): hl_interface_handle_layout_command
+Debug: 30 1 command.c:146 script_debug(): command - hla_device_desc ST-LINK
+Debug: 32 1 hla_interface.c:216 hl_interface_handle_device_desc_command(): hl_interface_handle_device_desc_command
+Debug: 33 1 command.c:146 script_debug(): command - hla_vid_pid 0x0483 0x3744 0x0483 0x3748 0x0483 0x374b 0x0483 0x374d 0x0483 0x374e 0x0483 0x374f 0x0483 0x3752 0x0483 0x3753
+Debug: 35 1 command.c:146 script_debug(): command - transport select hla_swd
+Debug: 36 1 hla_transport.c:205 hl_swd_transport_select(): hl_swd_transport_select
+Debug: 37 1 configuration.c:97 find_file(): found /usr/local/bin/../share/openocd/scripts/target/stm32f3x.cfg
+Debug: 38 2 configuration.c:97 find_file(): found /usr/local/bin/../share/openocd/scripts/target/swj-dp.tcl
+Debug: 39 2 command.c:146 script_debug(): command - transport select
+Debug: 40 2 configuration.c:97 find_file(): found /usr/local/bin/../share/openocd/scripts/mem_helper.tcl
+Debug: 41 2 command.c:146 script_debug(): command - add_usage_text mrw address
+Debug: 43 2 command.c:1115 help_add_command(): added 'mrw' help text
+Debug: 44 2 command.c:146 script_debug(): command - add_help_text mrw Returns value of word in memory.
+Debug: 46 2 command.c:1128 help_add_command(): added 'mrw' help text
+Debug: 47 2 command.c:146 script_debug(): command - add_usage_text mrh address
+Debug: 49 2 command.c:1115 help_add_command(): added 'mrh' help text
+Debug: 50 2 command.c:146 script_debug(): command - add_help_text mrh Returns value of halfword in memory.
+Debug: 52 2 command.c:1128 help_add_command(): added 'mrh' help text
+Debug: 53 2 command.c:146 script_debug(): command - add_usage_text mrb address
+Debug: 55 2 command.c:1115 help_add_command(): added 'mrb' help text
+Debug: 56 2 command.c:146 script_debug(): command - add_help_text mrb Returns value of byte in memory.
+Debug: 58 2 command.c:1128 help_add_command(): added 'mrb' help text
+Debug: 59 2 command.c:146 script_debug(): command - add_usage_text mmw address setbits clearbits
+Debug: 61 2 command.c:1115 help_add_command(): added 'mmw' help text
+Debug: 62 2 command.c:146 script_debug(): command - add_help_text mmw Modify word in memory. new_val = (old_val & ~clearbits) | setbits;
+Debug: 64 2 command.c:1128 help_add_command(): added 'mmw' help text
+Debug: 65 2 command.c:146 script_debug(): command - adapter speed 1000
+Debug: 67 2 core.c:1822 jtag_config_khz(): handle jtag khz
+Debug: 68 2 core.c:1785 adapter_khz_to_speed(): convert khz to interface specific speed value
+Debug: 69 2 core.c:1785 adapter_khz_to_speed(): convert khz to interface specific speed value
+Debug: 70 2 command.c:146 script_debug(): command - adapter srst delay 100
+Debug: 72 2 command.c:146 script_debug(): command - transport select
+Debug: 73 2 command.c:146 script_debug(): command - transport select
+Debug: 74 2 command.c:146 script_debug(): command - transport select
+Debug: 75 2 command.c:146 script_debug(): command - transport select
+Debug: 76 2 command.c:146 script_debug(): command - swd newdap stm32f3x cpu -irlen 4 -ircapture 0x1 -irmask 0xf -expected-id 0x2ba01477
+Debug: 77 2 hla_tcl.c:110 jim_hl_newtap_cmd(): Creating New Tap, Chip: stm32f3x, Tap: cpu, Dotted: stm32f3x.cpu, 8 params
+Debug: 78 2 hla_tcl.c:121 jim_hl_newtap_cmd(): Processing option: -irlen
+Debug: 79 2 hla_tcl.c:121 jim_hl_newtap_cmd(): Processing option: -ircapture
+Debug: 80 2 hla_tcl.c:121 jim_hl_newtap_cmd(): Processing option: -irmask
+Debug: 81 2 hla_tcl.c:121 jim_hl_newtap_cmd(): Processing option: -expected-id
+Debug: 82 2 core.c:1484 jtag_tap_init(): Created Tap: stm32f3x.cpu @ abs position 0, irlen 0, capture: 0x0 mask: 0x0
+Debug: 83 2 command.c:146 script_debug(): command - dap create stm32f3x.dap -chain-position stm32f3x.cpu
+Debug: 84 2 command.c:146 script_debug(): command - transport select
+Debug: 85 2 command.c:146 script_debug(): command - target create stm32f3x.cpu cortex_m -endian little -dap stm32f3x.dap
+Info : 86 2 target.c:5636 target_create(): The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+Debug: 87 2 hla_target.c:203 adapter_target_create(): adapter_target_create
+Debug: 88 2 hla_target.c:173 adapter_init_arch_info(): adapter_init_arch_info
+Debug: 89 2 command.c:375 register_command(): command 'rtt' is already registered in '<global>' context
+Debug: 90 2 command.c:146 script_debug(): command - stm32f3x.cpu configure -work-area-phys 0x20000000 -work-area-size 0x4000 -work-area-backup 0
+Debug: 91 2 target.c:2141 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 92 2 target.c:2141 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 93 2 target.c:2141 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 94 2 command.c:146 script_debug(): command - flash bank stm32f3x.flash stm32f1x 0 0 0 0 stm32f3x.cpu
+Debug: 96 2 tcl.c:1319 handle_flash_bank_command(): 'stm32f1x' driver usage field missing
+Debug: 97 2 command.c:146 script_debug(): command - reset_config srst_nogate
+Debug: 99 2 command.c:146 script_debug(): command - transport select
+Debug: 100 2 command.c:146 script_debug(): command - stm32f3x.cpu configure -event examine-end  stm32f3x_default_examine_end 
+Debug: 101 2 command.c:146 script_debug(): command - stm32f3x.cpu configure -event reset-start  stm32f3x_default_reset_start 
+Debug: 102 2 command.c:146 script_debug(): command - stm32f3x.cpu configure -event reset-init  stm32f3x_default_reset_init 
+Debug: 103 2 command.c:146 script_debug(): command - stm32f3x.cpu configure -event trace-config 
+	# Set TRACE_IOEN; TRACE_MODE is set to async; when using sync
+	# change this value accordingly to configure trace pins
+	# assignment
+	mmw 0xe0042004 0x00000020 0
+
+Debug: 104 2 command.c:146 script_debug(): command - reset_config none
+Debug: 106 2 command.c:146 script_debug(): command - init
+Debug: 108 2 command.c:146 script_debug(): command - target init
+Debug: 110 2 command.c:146 script_debug(): command - target names
+Debug: 111 2 command.c:146 script_debug(): command - stm32f3x.cpu cget -event gdb-flash-erase-start
+Debug: 112 2 command.c:146 script_debug(): command - stm32f3x.cpu configure -event gdb-flash-erase-start reset init
+Debug: 113 2 command.c:146 script_debug(): command - stm32f3x.cpu cget -event gdb-flash-write-end
+Debug: 114 2 command.c:146 script_debug(): command - stm32f3x.cpu configure -event gdb-flash-write-end reset halt
+Debug: 115 2 command.c:146 script_debug(): command - stm32f3x.cpu cget -event gdb-attach
+Debug: 116 2 command.c:146 script_debug(): command - stm32f3x.cpu configure -event gdb-attach halt 1000
+Debug: 117 2 target.c:1608 handle_target_init_command(): Initializing targets...
+Debug: 118 2 hla_target.c:193 adapter_init_target(): adapter_init_target
+Debug: 119 2 semihosting_common.c:97 semihosting_common_init():  
+Debug: 120 2 hla_interface.c:109 hl_interface_init(): hl_interface_init
+Debug: 121 2 hla_layout.c:95 hl_layout_init(): hl_layout_init
+Debug: 122 2 core.c:1785 adapter_khz_to_speed(): convert khz to interface specific speed value
+Debug: 123 2 core.c:1789 adapter_khz_to_speed(): have interface set up
+Debug: 124 2 core.c:1785 adapter_khz_to_speed(): convert khz to interface specific speed value
+Debug: 125 2 core.c:1789 adapter_khz_to_speed(): have interface set up
+Info : 126 2 core.c:1565 adapter_init(): clock speed 1000 kHz
+Debug: 127 2 openocd.c:143 handle_init_command(): Debug Adapter init complete
+Debug: 128 2 command.c:146 script_debug(): command - transport init
+Debug: 130 2 transport.c:229 handle_transport_init(): handle_transport_init
+Debug: 131 2 hla_transport.c:156 hl_transport_init(): hl_transport_init
+Debug: 132 2 hla_transport.c:173 hl_transport_init(): current transport hla_swd
+Debug: 133 2 hla_interface.c:42 hl_interface_open(): hl_interface_open
+Debug: 134 2 hla_layout.c:40 hl_layout_open(): hl_layout_open
+Debug: 135 2 stlink_usb.c:2819 stlink_usb_open(): stlink_usb_open
+Debug: 136 2 stlink_usb.c:2831 stlink_usb_open(): transport: 4 vid: 0x0483 pid: 0x3744 serial: 
+Debug: 137 2 stlink_usb.c:2831 stlink_usb_open(): transport: 4 vid: 0x0483 pid: 0x3748 serial: 
+Debug: 138 2 stlink_usb.c:2831 stlink_usb_open(): transport: 4 vid: 0x0483 pid: 0x374b serial: 
+Debug: 139 2 stlink_usb.c:2831 stlink_usb_open(): transport: 4 vid: 0x0483 pid: 0x374d serial: 
+Debug: 140 2 stlink_usb.c:2831 stlink_usb_open(): transport: 4 vid: 0x0483 pid: 0x374e serial: 
+Debug: 141 2 stlink_usb.c:2831 stlink_usb_open(): transport: 4 vid: 0x0483 pid: 0x374f serial: 
+Debug: 142 2 stlink_usb.c:2831 stlink_usb_open(): transport: 4 vid: 0x0483 pid: 0x3752 serial: 
+Debug: 143 2 stlink_usb.c:2831 stlink_usb_open(): transport: 4 vid: 0x0483 pid: 0x3753 serial: 
+Info : 144 7 stlink_usb.c:1098 stlink_usb_version(): STLINK V2J25M14 (API v2) VID:PID 0483:374B
+Debug: 145 7 stlink_usb.c:1323 stlink_usb_exit_mode(): MODE: 0x01
+Info : 146 7 stlink_usb.c:1134 stlink_usb_check_voltage(): Target voltage: 3.253755
+Debug: 147 7 stlink_usb.c:1391 stlink_usb_init_mode(): MODE: 0x01
+Debug: 148 7 stlink_usb.c:2606 stlink_dump_speed_map(): Supported clock speeds are:
+Debug: 149 7 stlink_usb.c:2609 stlink_dump_speed_map(): 4000 kHz
+Debug: 150 7 stlink_usb.c:2609 stlink_dump_speed_map(): 1800 kHz
+Debug: 151 7 stlink_usb.c:2609 stlink_dump_speed_map(): 1200 kHz
+Debug: 152 7 stlink_usb.c:2609 stlink_dump_speed_map(): 950 kHz
+Debug: 153 7 stlink_usb.c:2609 stlink_dump_speed_map(): 480 kHz
+Debug: 154 7 stlink_usb.c:2609 stlink_dump_speed_map(): 240 kHz
+Debug: 155 7 stlink_usb.c:2609 stlink_dump_speed_map(): 125 kHz
+Debug: 156 7 stlink_usb.c:2609 stlink_dump_speed_map(): 100 kHz
+Debug: 157 7 stlink_usb.c:2609 stlink_dump_speed_map(): 50 kHz
+Debug: 158 7 stlink_usb.c:2609 stlink_dump_speed_map(): 25 kHz
+Debug: 159 7 stlink_usb.c:2609 stlink_dump_speed_map(): 15 kHz
+Debug: 160 7 stlink_usb.c:2609 stlink_dump_speed_map(): 5 kHz
+Debug: 161 9 stlink_usb.c:1450 stlink_usb_init_mode(): MODE: 0x02
+Debug: 162 9 stlink_usb.c:2990 stlink_usb_open(): Using TAR autoincrement: 4096
+Debug: 163 9 core.c:640 adapter_system_reset(): SRST line released
+Debug: 164 110 hla_interface.c:67 hl_interface_init_target(): hl_interface_init_target
+Debug: 165 110 stlink_usb.c:1683 stlink_usb_idcode(): IDCODE: 0x2BA01477
+Debug: 166 110 command.c:146 script_debug(): command - dap init
+Debug: 168 110 arm_dap.c:106 dap_init_all(): Initializing all DAPs ...
+Debug: 169 110 openocd.c:160 handle_init_command(): Examining targets...
+Debug: 170 110 target.c:1794 target_call_event_callbacks(): target event 19 (examine-start) for core stm32f3x.cpu
+Debug: 171 110 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0xe000ed00 4 1
+Debug: 172 111 target.c:2556 target_read_u32(): address: 0xe000ed00, value: 0x410fc241
+Debug: 173 111 cortex_m.c:1998 cortex_m_examine(): Cortex-M4 r0p1 processor detected
+Debug: 174 111 cortex_m.c:2010 cortex_m_examine(): cpuid: 0x410fc241
+Debug: 175 111 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0xe000ef40 4 1
+Debug: 176 112 target.c:2556 target_read_u32(): address: 0xe000ef40, value: 0x10110021
+Debug: 177 112 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0xe000ef44 4 1
+Debug: 178 112 target.c:2556 target_read_u32(): address: 0xe000ef44, value: 0x11000011
+Debug: 179 112 cortex_m.c:2021 cortex_m_examine(): Cortex-M4 floating point feature FPv4_SP found
+Debug: 180 112 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0xe000edf0 4 1
+Debug: 181 113 target.c:2556 target_read_u32(): address: 0xe000edf0, value: 0x00030003
+Debug: 182 113 target.c:2644 target_write_u32(): address: 0xe000edfc, value: 0x01000000
+Debug: 183 113 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe000edfc 4 1
+Debug: 184 113 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0xe0002000 4 1
+Debug: 185 114 target.c:2556 target_read_u32(): address: 0xe0002000, value: 0x00000260
+Debug: 186 114 target.c:2644 target_write_u32(): address: 0xe0002008, value: 0x00000000
+Debug: 187 114 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe0002008 4 1
+Debug: 188 114 target.c:2644 target_write_u32(): address: 0xe000200c, value: 0x00000000
+Debug: 189 114 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe000200c 4 1
+Debug: 190 115 target.c:2644 target_write_u32(): address: 0xe0002010, value: 0x00000000
+Debug: 191 115 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe0002010 4 1
+Debug: 192 115 target.c:2644 target_write_u32(): address: 0xe0002014, value: 0x00000000
+Debug: 193 115 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe0002014 4 1
+Debug: 194 116 target.c:2644 target_write_u32(): address: 0xe0002018, value: 0x00000000
+Debug: 195 116 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe0002018 4 1
+Debug: 196 116 target.c:2644 target_write_u32(): address: 0xe000201c, value: 0x00000000
+Debug: 197 116 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe000201c 4 1
+Debug: 198 117 target.c:2644 target_write_u32(): address: 0xe0002020, value: 0x00000000
+Debug: 199 117 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe0002020 4 1
+Debug: 200 117 target.c:2644 target_write_u32(): address: 0xe0002024, value: 0x00000000
+Debug: 201 117 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe0002024 4 1
+Debug: 202 118 cortex_m.c:2111 cortex_m_examine(): FPB fpcr 0x260, numcode 6, numlit 2
+Debug: 203 118 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0xe0001000 4 1
+Debug: 204 118 target.c:2556 target_read_u32(): address: 0xe0001000, value: 0x40000000
+Debug: 205 118 cortex_m.c:1828 cortex_m_dwt_setup(): DWT_CTRL: 0x40000000
+Debug: 206 118 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0xe0001fbc 4 1
+Debug: 207 119 target.c:2556 target_read_u32(): address: 0xe0001fbc, value: 0x00000000
+Debug: 208 119 cortex_m.c:1835 cortex_m_dwt_setup(): DWT_DEVARCH: 0x0
+Debug: 209 119 target.c:2644 target_write_u32(): address: 0xe0001028, value: 0x00000000
+Debug: 210 119 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe0001028 4 1
+Debug: 211 119 target.c:2644 target_write_u32(): address: 0xe0001038, value: 0x00000000
+Debug: 212 119 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe0001038 4 1
+Debug: 213 120 target.c:2644 target_write_u32(): address: 0xe0001048, value: 0x00000000
+Debug: 214 120 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe0001048 4 1
+Debug: 215 120 target.c:2644 target_write_u32(): address: 0xe0001058, value: 0x00000000
+Debug: 216 120 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe0001058 4 1
+Debug: 217 121 cortex_m.c:1882 cortex_m_dwt_setup(): DWT dwtcr 0x40000000, comp 4, watch/trigger
+Info : 218 121 cortex_m.c:2121 cortex_m_examine(): stm32f3x.cpu: hardware has 6 breakpoints, 4 watchpoints
+Debug: 219 121 target.c:1794 target_call_event_callbacks(): target event 21 (examine-end) for core stm32f3x.cpu
+Debug: 220 121 target.c:4742 target_handle_event(): target(0): stm32f3x.cpu (hla_target) event: 21 (examine-end) action:  stm32f3x_default_examine_end 
+Debug: 221 121 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0xe0042004 4 1
+Debug: 222 121 command.c:146 script_debug(): command - mww 0xe0042004 7
+Debug: 223 122 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0xe000edf8 4 1
+Debug: 224 122 target.c:2556 target_read_u32(): address: 0xe000edf8, value: 0x00000000
+Debug: 225 122 armv7m.c:341 armv7m_read_core_reg(): read r0 value 0x19224eb3
+Debug: 226 123 armv7m.c:341 armv7m_read_core_reg(): read r1 value 0x00000000
+Debug: 227 124 armv7m.c:341 armv7m_read_core_reg(): read r2 value 0x200005a0
+Debug: 228 124 armv7m.c:341 armv7m_read_core_reg(): read r3 value 0x00000868
+Debug: 229 125 armv7m.c:341 armv7m_read_core_reg(): read r4 value 0x00000868
+Debug: 230 125 armv7m.c:341 armv7m_read_core_reg(): read r5 value 0x00000008
+Debug: 231 125 armv7m.c:341 armv7m_read_core_reg(): read r6 value 0x04c11db7
+Debug: 232 126 armv7m.c:341 armv7m_read_core_reg(): read r7 value 0x00000000
+Debug: 233 126 armv7m.c:341 armv7m_read_core_reg(): read r8 value 0x00000000
+Debug: 234 127 armv7m.c:341 armv7m_read_core_reg(): read r9 value 0x00000000
+Debug: 235 127 armv7m.c:341 armv7m_read_core_reg(): read r10 value 0x00000000
+Debug: 236 128 armv7m.c:341 armv7m_read_core_reg(): read r11 value 0x00000000
+Debug: 237 128 armv7m.c:341 armv7m_read_core_reg(): read r12 value 0x00000000
+Debug: 238 129 armv7m.c:341 armv7m_read_core_reg(): read sp value 0x20003000
+Debug: 239 129 armv7m.c:341 armv7m_read_core_reg(): read lr value 0xffffffff
+Debug: 240 130 armv7m.c:341 armv7m_read_core_reg(): read pc value 0x2000002e
+Debug: 241 130 armv7m.c:341 armv7m_read_core_reg(): read xPSR value 0x61000000
+Debug: 242 131 armv7m.c:341 armv7m_read_core_reg(): read msp value 0x20003000
+Debug: 243 131 armv7m.c:341 armv7m_read_core_reg(): read psp value 0x00000000
+Debug: 244 132 armv7m.c:341 armv7m_read_core_reg(): read pmsk_bpri_fltmsk_ctrl value 0x00000000
+Debug: 245 132 armv7m.c:339 armv7m_read_core_reg(): read d0 value 0x0000000000000000
+Debug: 246 133 armv7m.c:339 armv7m_read_core_reg(): read d1 value 0x0000000000000000
+Debug: 247 134 armv7m.c:339 armv7m_read_core_reg(): read d2 value 0x0000000000000000
+Debug: 248 135 armv7m.c:339 armv7m_read_core_reg(): read d3 value 0x0000000000000000
+Debug: 249 136 armv7m.c:339 armv7m_read_core_reg(): read d4 value 0x0000000000000000
+Debug: 250 137 armv7m.c:339 armv7m_read_core_reg(): read d5 value 0x0000000000000000
+Debug: 251 138 armv7m.c:339 armv7m_read_core_reg(): read d6 value 0x0000000000000000
+Debug: 252 139 armv7m.c:339 armv7m_read_core_reg(): read d7 value 0x0000000000000000
+Debug: 253 140 armv7m.c:339 armv7m_read_core_reg(): read d8 value 0x0000000000000000
+Debug: 254 141 armv7m.c:339 armv7m_read_core_reg(): read d9 value 0x0000000000000000
+Debug: 255 142 armv7m.c:339 armv7m_read_core_reg(): read d10 value 0x0000000000000000
+Debug: 256 143 armv7m.c:339 armv7m_read_core_reg(): read d11 value 0x0000000000000000
+Debug: 257 144 armv7m.c:339 armv7m_read_core_reg(): read d12 value 0x0000000000000000
+Debug: 258 144 armv7m.c:339 armv7m_read_core_reg(): read d13 value 0x0000000000000000
+Debug: 259 145 armv7m.c:339 armv7m_read_core_reg(): read d14 value 0x0000000000000000
+Debug: 260 146 armv7m.c:339 armv7m_read_core_reg(): read d15 value 0x0000000000000000
+Debug: 261 147 armv7m.c:341 armv7m_read_core_reg(): read fpscr value 0x00000000
+Debug: 262 147 hla_target.c:286 adapter_debug_entry(): entered debug state in core mode: Thread at PC 0x2000002e, target->state: halted
+Debug: 263 147 target.c:1794 target_call_event_callbacks(): target event 0 (gdb-halt) for core stm32f3x.cpu
+Debug: 264 147 target.c:1794 target_call_event_callbacks(): target event 1 (halted) for core stm32f3x.cpu
+Debug: 265 147 hla_target.c:331 adapter_poll(): halted: PC: 0x2000002e
+Debug: 267 147 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe0042004 4 1
+Debug: 268 148 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0xe0042008 4 1
+Debug: 269 148 command.c:146 script_debug(): command - mww 0xe0042008 6144
+Debug: 271 148 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe0042008 4 1
+Debug: 272 149 command.c:146 script_debug(): command - flash init
+Debug: 274 149 tcl.c:1385 handle_flash_init_command(): Initializing flash devices...
+Debug: 275 149 command.c:146 script_debug(): command - nand init
+Debug: 277 150 tcl.c:498 handle_nand_init_command(): Initializing NAND devices...
+Debug: 278 150 command.c:146 script_debug(): command - pld init
+Debug: 280 150 pld.c:206 handle_pld_init_command(): Initializing PLDs...
+Info : 281 150 gdb_server.c:3503 gdb_target_start(): starting gdb server for stm32f3x.cpu on 3333
+Info : 282 150 server.c:311 add_service(): Listening on port 3333 for gdb connections
+Debug: 283 150 command.c:146 script_debug(): command - init
+Debug: 285 151 command.c:146 script_debug(): command - reset init
+Debug: 287 151 target.c:1813 target_call_reset_callbacks(): target reset 3 (init)
+Debug: 288 151 command.c:146 script_debug(): command - target names
+Debug: 289 151 command.c:146 script_debug(): command - stm32f3x.cpu invoke-event reset-start
+Debug: 290 151 target.c:4742 target_handle_event(): target(0): stm32f3x.cpu (hla_target) event: 9 (reset-start) action:  stm32f3x_default_reset_start 
+Debug: 291 151 command.c:146 script_debug(): command - adapter speed 1000
+Debug: 293 151 core.c:1822 jtag_config_khz(): handle jtag khz
+Debug: 294 151 core.c:1785 adapter_khz_to_speed(): convert khz to interface specific speed value
+Debug: 295 151 core.c:1789 adapter_khz_to_speed(): have interface set up
+Info : 296 151 stlink_usb.c:2549 stlink_match_speed_map(): Unable to match requested speed 1000 kHz, using 950 kHz
+Debug: 297 151 core.c:1785 adapter_khz_to_speed(): convert khz to interface specific speed value
+Debug: 298 151 core.c:1789 adapter_khz_to_speed(): have interface set up
+Info : 299 151 stlink_usb.c:2549 stlink_match_speed_map(): Unable to match requested speed 1000 kHz, using 950 kHz
+Debug: 300 151 command.c:146 script_debug(): command - transport select
+Debug: 301 151 command.c:146 script_debug(): command - transport select
+Debug: 302 151 command.c:146 script_debug(): command - stm32f3x.cpu invoke-event examine-start
+Debug: 303 151 command.c:146 script_debug(): command - stm32f3x.cpu arp_examine allow-defer
+Debug: 304 151 command.c:146 script_debug(): command - stm32f3x.cpu invoke-event examine-end
+Debug: 305 151 target.c:4742 target_handle_event(): target(0): stm32f3x.cpu (hla_target) event: 21 (examine-end) action:  stm32f3x_default_examine_end 
+Debug: 306 151 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0xe0042004 4 1
+Debug: 307 152 command.c:146 script_debug(): command - mww 0xe0042004 7
+Debug: 309 152 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe0042004 4 1
+Debug: 310 152 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0xe0042008 4 1
+Debug: 311 153 command.c:146 script_debug(): command - mww 0xe0042008 6144
+Debug: 313 153 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe0042008 4 1
+Debug: 314 153 command.c:146 script_debug(): command - stm32f3x.cpu invoke-event reset-assert-pre
+Debug: 315 153 command.c:146 script_debug(): command - transport select
+Debug: 316 153 command.c:146 script_debug(): command - stm32f3x.cpu arp_reset assert 1
+Debug: 317 153 target.c:2141 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 318 153 hla_target.c:344 hl_assert_reset(): hl_assert_reset
+Debug: 319 155 command.c:146 script_debug(): command - stm32f3x.cpu invoke-event reset-assert-post
+Debug: 320 155 command.c:146 script_debug(): command - stm32f3x.cpu invoke-event reset-deassert-pre
+Debug: 321 155 command.c:146 script_debug(): command - transport select
+Debug: 322 155 command.c:146 script_debug(): command - stm32f3x.cpu arp_reset deassert 1
+Debug: 323 155 target.c:2141 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 324 155 hla_target.c:403 hl_deassert_reset(): hl_deassert_reset
+Debug: 325 155 command.c:146 script_debug(): command - stm32f3x.cpu invoke-event reset-deassert-post
+Debug: 326 155 command.c:146 script_debug(): command - transport select
+Debug: 327 155 command.c:146 script_debug(): command - stm32f3x.cpu was_examined
+Debug: 328 155 command.c:146 script_debug(): command - stm32f3x.cpu arp_waitstate halted 1000
+Debug: 329 156 target.c:3210 target_wait_state(): waiting for target halted...
+Debug: 330 157 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0xe000edf8 4 1
+Debug: 331 158 target.c:2556 target_read_u32(): address: 0xe000edf8, value: 0x00000000
+Debug: 332 158 armv7m.c:341 armv7m_read_core_reg(): read r0 value 0x00000000
+Debug: 333 159 armv7m.c:341 armv7m_read_core_reg(): read r1 value 0x00000000
+Debug: 334 159 armv7m.c:341 armv7m_read_core_reg(): read r2 value 0x00000000
+Debug: 335 160 armv7m.c:341 armv7m_read_core_reg(): read r3 value 0x00000000
+Debug: 336 160 armv7m.c:341 armv7m_read_core_reg(): read r4 value 0x00000000
+Debug: 337 160 armv7m.c:341 armv7m_read_core_reg(): read r5 value 0x00000000
+Debug: 338 161 armv7m.c:341 armv7m_read_core_reg(): read r6 value 0x00000000
+Debug: 339 161 armv7m.c:341 armv7m_read_core_reg(): read r7 value 0x00000000
+Debug: 340 162 armv7m.c:341 armv7m_read_core_reg(): read r8 value 0x00000000
+Debug: 341 162 armv7m.c:341 armv7m_read_core_reg(): read r9 value 0x00000000
+Debug: 342 163 armv7m.c:341 armv7m_read_core_reg(): read r10 value 0x00000000
+Debug: 343 163 armv7m.c:341 armv7m_read_core_reg(): read r11 value 0x00000000
+Debug: 344 164 armv7m.c:341 armv7m_read_core_reg(): read r12 value 0x00000000
+Debug: 345 164 armv7m.c:341 armv7m_read_core_reg(): read sp value 0x20003000
+Debug: 346 164 armv7m.c:341 armv7m_read_core_reg(): read lr value 0xffffffff
+Debug: 347 165 armv7m.c:341 armv7m_read_core_reg(): read pc value 0x08000740
+Debug: 348 165 armv7m.c:341 armv7m_read_core_reg(): read xPSR value 0x01000000
+Debug: 349 166 armv7m.c:341 armv7m_read_core_reg(): read msp value 0x20003000
+Debug: 350 166 armv7m.c:341 armv7m_read_core_reg(): read psp value 0x00000000
+Debug: 351 167 armv7m.c:341 armv7m_read_core_reg(): read pmsk_bpri_fltmsk_ctrl value 0x00000000
+Debug: 352 168 armv7m.c:339 armv7m_read_core_reg(): read d0 value 0x0000000000000000
+Debug: 353 169 armv7m.c:339 armv7m_read_core_reg(): read d1 value 0x0000000000000000
+Debug: 354 170 armv7m.c:339 armv7m_read_core_reg(): read d2 value 0x0000000000000000
+Debug: 355 171 armv7m.c:339 armv7m_read_core_reg(): read d3 value 0x0000000000000000
+Debug: 356 172 armv7m.c:339 armv7m_read_core_reg(): read d4 value 0x0000000000000000
+Debug: 357 173 armv7m.c:339 armv7m_read_core_reg(): read d5 value 0x0000000000000000
+Debug: 358 174 armv7m.c:339 armv7m_read_core_reg(): read d6 value 0x0000000000000000
+Debug: 359 175 armv7m.c:339 armv7m_read_core_reg(): read d7 value 0x0000000000000000
+Debug: 360 176 armv7m.c:339 armv7m_read_core_reg(): read d8 value 0x0000000000000000
+Debug: 361 177 armv7m.c:339 armv7m_read_core_reg(): read d9 value 0x0000000000000000
+Debug: 362 178 armv7m.c:339 armv7m_read_core_reg(): read d10 value 0x0000000000000000
+Debug: 363 178 armv7m.c:339 armv7m_read_core_reg(): read d11 value 0x0000000000000000
+Debug: 364 179 armv7m.c:339 armv7m_read_core_reg(): read d12 value 0x0000000000000000
+Debug: 365 180 armv7m.c:339 armv7m_read_core_reg(): read d13 value 0x0000000000000000
+Debug: 366 181 armv7m.c:339 armv7m_read_core_reg(): read d14 value 0x0000000000000000
+Debug: 367 182 armv7m.c:339 armv7m_read_core_reg(): read d15 value 0x0000000000000000
+Debug: 368 183 armv7m.c:341 armv7m_read_core_reg(): read fpscr value 0x00000000
+Debug: 369 183 hla_target.c:286 adapter_debug_entry(): entered debug state in core mode: Thread at PC 0x08000740, target->state: halted
+Debug: 370 183 target.c:1794 target_call_event_callbacks(): target event 0 (gdb-halt) for core stm32f3x.cpu
+Debug: 371 183 target.c:1794 target_call_event_callbacks(): target event 1 (halted) for core stm32f3x.cpu
+User : 372 183 armv7m.c:696 armv7m_arch_state(): target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000740 msp: 0x20003000
+Debug: 373 183 hla_target.c:331 adapter_poll(): halted: PC: 0x08000740
+Debug: 374 183 command.c:146 script_debug(): command - stm32f3x.cpu curstate
+Debug: 375 183 command.c:146 script_debug(): command - transport select
+Debug: 376 183 command.c:146 script_debug(): command - stm32f3x.cpu was_examined
+Debug: 377 183 command.c:146 script_debug(): command - stm32f3x.cpu arp_waitstate halted 5000
+Debug: 378 184 command.c:146 script_debug(): command - stm32f3x.cpu invoke-event reset-init
+Debug: 379 184 target.c:4742 target_handle_event(): target(0): stm32f3x.cpu (hla_target) event: 15 (reset-init) action:  stm32f3x_default_reset_init 
+Debug: 380 184 command.c:146 script_debug(): command - mww 0x40021004 0x00380400
+Debug: 382 184 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40021004 4 1
+Debug: 383 184 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x40021000 4 1
+Debug: 384 185 command.c:146 script_debug(): command - mww 0x40021000 16801155
+Debug: 386 185 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40021000 4 1
+Debug: 387 185 command.c:146 script_debug(): command - mww 0x40022000 0x00000012
+Debug: 389 185 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022000 4 1
+Debug: 390 186 command.c:146 script_debug(): command - sleep 10
+Debug: 392 197 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x40021004 4 1
+Debug: 393 197 command.c:146 script_debug(): command - mww 0x40021004 3671042
+Debug: 395 197 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40021004 4 1
+Debug: 396 198 command.c:146 script_debug(): command - adapter speed 8000
+Debug: 398 198 core.c:1822 jtag_config_khz(): handle jtag khz
+Debug: 399 198 core.c:1785 adapter_khz_to_speed(): convert khz to interface specific speed value
+Debug: 400 198 core.c:1789 adapter_khz_to_speed(): have interface set up
+Info : 401 198 stlink_usb.c:2549 stlink_match_speed_map(): Unable to match requested speed 8000 kHz, using 4000 kHz
+Debug: 402 198 core.c:1785 adapter_khz_to_speed(): convert khz to interface specific speed value
+Debug: 403 198 core.c:1789 adapter_khz_to_speed(): have interface set up
+Info : 404 198 stlink_usb.c:2549 stlink_match_speed_map(): Unable to match requested speed 8000 kHz, using 4000 kHz
+Debug: 405 198 command.c:146 script_debug(): command - stm32f3x.cpu invoke-event reset-end
+Debug: 406 198 command.c:146 script_debug(): command - echo ** Programming Started **
+User : 408 198 command.c:769 jim_echo(): ** Programming Started **
+Debug: 409 199 command.c:146 script_debug(): command - flash write_image erase main.elf
+Debug: 411 199 configuration.c:97 find_file(): found main.elf
+Debug: 412 199 image.c:69 autodetect_image_type(): ELF image detected.
+Debug: 413 199 configuration.c:97 find_file(): found main.elf
+Debug: 414 199 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0xe000ed00 4 1
+Debug: 415 199 target.c:2556 target_read_u32(): address: 0xe000ed00, value: 0x410fc241
+Debug: 416 199 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0xe0042000 4 1
+Debug: 417 199 target.c:2556 target_read_u32(): address: 0xe0042000, value: 0x10016438
+Info : 418 199 stm32f1x.c:712 stm32x_probe(): device id = 0x10016438
+Debug: 419 199 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0xe000ed00 4 1
+Debug: 420 200 target.c:2556 target_read_u32(): address: 0xe000ed00, value: 0x410fc241
+Debug: 421 200 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x1ffff7cc 2 1
+Debug: 422 200 target.c:2580 target_read_u16(): address: 0x1ffff7cc, value: 0x0040
+Info : 423 200 stm32f1x.c:862 stm32x_probe(): flash size = 64kbytes
+Debug: 424 200 core.c:933 flash_write_unlock_verify(): image_read_section: section = 0, t_section_num = 0, section_offset = 0, buffer_idx = 0, size_read = 12460
+Debug: 425 200 image.c:493 image_elf_read_section(): load segment 0 at 0x0 (sz = 0x30ac)
+Debug: 426 200 image.c:499 image_elf_read_section(): read elf: size = 0x30ac at 0x10000
+Debug: 427 200 core.c:933 flash_write_unlock_verify(): image_read_section: section = 1, t_section_num = 1, section_offset = 0, buffer_idx = 12460, size_read = 472
+Debug: 428 200 image.c:493 image_elf_read_section(): load segment 1 at 0x0 (sz = 0x1d8)
+Debug: 429 200 image.c:499 image_elf_read_section(): read elf: size = 0x1d8 at 0x20000
+Debug: 430 200 target.c:2644 target_write_u32(): address: 0x40022004, value: 0x45670123
+Debug: 431 200 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022004 4 1
+Debug: 432 201 target.c:2644 target_write_u32(): address: 0x40022004, value: 0xcdef89ab
+Debug: 433 201 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022004 4 1
+Debug: 434 201 target.c:2644 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 435 201 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022010 4 1
+Debug: 436 201 target.c:2644 target_write_u32(): address: 0x40022014, value: 0x08000000
+Debug: 437 201 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022014 4 1
+Debug: 438 202 target.c:2644 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 439 202 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022010 4 1
+Debug: 440 202 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 441 202 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000003
+Debug: 442 202 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x3
+Debug: 443 203 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 444 204 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000003
+Debug: 445 204 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x3
+Debug: 446 205 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 447 205 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000003
+Debug: 448 205 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x3
+Debug: 449 206 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 450 206 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000003
+Debug: 451 206 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x3
+Debug: 452 207 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 453 208 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000003
+Debug: 454 208 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x3
+Debug: 455 209 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 456 209 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000003
+Debug: 457 209 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x3
+Debug: 458 210 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 459 210 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000003
+Debug: 460 210 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x3
+Debug: 461 212 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 462 212 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000003
+Debug: 463 212 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x3
+Debug: 464 213 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 465 213 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000003
+Debug: 466 213 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x3
+Debug: 467 214 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 468 215 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000003
+Debug: 469 215 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x3
+Debug: 470 216 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 471 216 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000003
+Debug: 472 216 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x3
+Debug: 473 217 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 474 218 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000003
+Debug: 475 218 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x3
+Debug: 476 219 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 477 219 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000003
+Debug: 478 219 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x3
+Debug: 479 220 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 480 221 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000003
+Debug: 481 221 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x3
+Debug: 482 222 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 483 222 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000003
+Debug: 484 222 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x3
+Debug: 485 223 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 486 223 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000003
+Debug: 487 223 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x3
+Debug: 488 225 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 489 225 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 490 225 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x20
+Debug: 491 225 target.c:2644 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 492 225 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022010 4 1
+Debug: 493 225 target.c:2644 target_write_u32(): address: 0x40022014, value: 0x08000800
+Debug: 494 225 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022014 4 1
+Debug: 495 226 target.c:2644 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 496 226 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022010 4 1
+Debug: 497 226 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 498 226 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 499 226 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 500 227 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 501 228 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 502 228 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 503 229 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 504 229 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 505 229 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 506 230 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 507 231 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 508 231 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 509 232 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 510 232 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 511 232 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 512 233 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 513 233 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 514 234 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 515 235 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 516 235 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 517 235 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 518 236 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 519 236 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 520 236 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 521 237 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 522 238 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 523 238 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 524 239 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 525 239 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 526 239 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 527 241 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 528 241 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 529 241 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 530 242 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 531 242 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 532 242 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 533 243 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 534 244 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 535 244 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 536 245 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 537 245 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 538 245 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 539 246 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 540 247 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 541 247 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 542 248 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 543 248 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 544 248 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x20
+Debug: 545 248 target.c:2644 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 546 248 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022010 4 1
+Debug: 547 249 target.c:2644 target_write_u32(): address: 0x40022014, value: 0x08001000
+Debug: 548 249 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022014 4 1
+Debug: 549 249 target.c:2644 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 550 249 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022010 4 1
+Debug: 551 249 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 552 250 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 553 250 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 554 251 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 555 251 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 556 251 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 557 252 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 558 253 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 559 253 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 560 254 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 561 254 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 562 254 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 563 255 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 564 255 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 565 255 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 566 256 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 567 257 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 568 257 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 569 258 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 570 258 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 571 258 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 572 259 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 573 260 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 574 260 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 575 261 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 576 261 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 577 261 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 578 262 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 579 262 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 580 262 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 581 264 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 582 264 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 583 264 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 584 265 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 585 265 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 586 265 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 587 266 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 588 267 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 589 267 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 590 268 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 591 268 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 592 268 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 593 269 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 594 270 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 595 270 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 596 271 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 597 271 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 598 271 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 599 272 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 600 272 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 601 272 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x20
+Debug: 602 272 target.c:2644 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 603 272 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022010 4 1
+Debug: 604 273 target.c:2644 target_write_u32(): address: 0x40022014, value: 0x08001800
+Debug: 605 273 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022014 4 1
+Debug: 606 273 target.c:2644 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 607 273 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022010 4 1
+Debug: 608 273 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 609 274 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 610 274 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 611 275 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 612 275 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 613 275 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 614 276 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 615 276 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 616 276 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 617 277 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 618 278 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 619 278 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 620 279 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 621 279 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 622 279 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 623 280 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 624 281 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 625 281 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 626 282 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 627 282 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 628 282 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 629 283 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 630 284 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 631 284 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 632 285 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 633 285 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 634 285 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 635 286 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 636 286 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 637 286 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 638 287 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 639 288 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 640 288 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 641 289 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 642 289 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 643 289 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 644 290 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 645 291 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 646 291 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 647 292 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 648 292 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 649 292 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 650 293 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 651 294 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 652 294 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 653 295 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 654 295 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 655 295 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 656 296 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 657 296 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 658 296 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x20
+Debug: 659 296 target.c:2644 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 660 296 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022010 4 1
+Debug: 661 297 target.c:2644 target_write_u32(): address: 0x40022014, value: 0x08002000
+Debug: 662 297 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022014 4 1
+Debug: 663 297 target.c:2644 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 664 297 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022010 4 1
+Debug: 665 297 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 666 298 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 667 298 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 668 299 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 669 299 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 670 299 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 671 300 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 672 301 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 673 301 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 674 302 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 675 302 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 676 302 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 677 303 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 678 303 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 679 303 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 680 305 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 681 305 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 682 305 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 683 306 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 684 306 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 685 306 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 686 307 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 687 308 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 688 308 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 689 309 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 690 309 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 691 309 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 692 310 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 693 310 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 694 310 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 695 312 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 696 312 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 697 312 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 698 313 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 699 313 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 700 313 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 701 314 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 702 315 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 703 315 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 704 316 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 705 316 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 706 316 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 707 317 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 708 318 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 709 318 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 710 319 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 711 319 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 712 319 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 713 320 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 714 320 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 715 320 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x20
+Debug: 716 320 target.c:2644 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 717 320 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022010 4 1
+Debug: 718 321 target.c:2644 target_write_u32(): address: 0x40022014, value: 0x08002800
+Debug: 719 321 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022014 4 1
+Debug: 720 321 target.c:2644 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 721 321 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022010 4 1
+Debug: 722 321 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 723 322 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 724 322 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 725 323 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 726 323 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 727 323 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 728 324 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 729 324 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 730 324 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 731 326 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 732 326 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 733 326 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 734 327 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 735 327 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 736 327 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 737 328 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 738 329 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 739 329 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 740 330 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 741 330 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 742 330 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 743 331 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 744 332 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 745 332 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 746 333 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 747 333 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 748 333 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 749 334 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 750 334 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 751 334 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 752 335 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 753 336 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 754 336 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 755 337 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 756 337 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 757 337 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 758 338 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 759 339 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 760 339 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 761 340 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 762 340 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 763 340 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 764 341 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 765 342 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 766 342 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 767 343 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 768 343 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 769 343 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 770 344 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 771 344 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 772 344 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x20
+Debug: 773 344 target.c:2644 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 774 344 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022010 4 1
+Debug: 775 345 target.c:2644 target_write_u32(): address: 0x40022014, value: 0x08003000
+Debug: 776 345 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022014 4 1
+Debug: 777 345 target.c:2644 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 778 345 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022010 4 1
+Debug: 779 345 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 780 346 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 781 346 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 782 347 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 783 347 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 784 347 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 785 348 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 786 349 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 787 349 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 788 350 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 789 350 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 790 350 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 791 351 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 792 352 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 793 352 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 794 353 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 795 353 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 796 353 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 797 355 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 798 355 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 799 355 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 800 356 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 801 356 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 802 356 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 803 358 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 804 358 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 805 358 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 806 359 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 807 359 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 808 359 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 809 361 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 810 361 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 811 361 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 812 362 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 813 362 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 814 362 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 815 363 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 816 364 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 817 364 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 818 365 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 819 365 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 820 365 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 821 366 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 822 367 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 823 367 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x23
+Debug: 824 368 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x4002200c 4 1
+Debug: 825 368 target.c:2556 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 826 368 stm32f1x.c:180 stm32x_wait_status_busy(): status: 0x20
+Debug: 827 368 target.c:2644 target_write_u32(): address: 0x40022010, value: 0x00000080
+Debug: 828 368 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022010 4 1
+Debug: 829 369 target.c:2644 target_write_u32(): address: 0x40022004, value: 0x45670123
+Debug: 830 369 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022004 4 1
+Debug: 831 369 target.c:2644 target_write_u32(): address: 0x40022004, value: 0xcdef89ab
+Debug: 832 369 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022004 4 1
+Debug: 833 369 target.c:2644 target_write_u32(): address: 0x40022010, value: 0x00000001
+Debug: 834 369 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022010 4 1
+Debug: 835 370 target.c:1988 target_alloc_working_area_try(): MMU disabled, using physical address for working memory 0x20000000
+Debug: 836 370 target.c:2043 target_alloc_working_area_try(): allocated new working area of 60 bytes at address 0x20000000
+Debug: 837 370 target.c:1909 print_wa_layout():  * 0x20000000-0x2000003b (60 bytes)
+Debug: 838 370 target.c:1909 print_wa_layout():    0x2000003c-0x20003fff (16324 bytes)
+Debug: 839 370 target.c:2348 target_write_buffer(): writing buffer of 60 byte at 0x20000000
+Debug: 840 370 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000000 4 15
+Debug: 841 370 target.c:2043 target_alloc_working_area_try(): allocated new working area of 8192 bytes at address 0x2000003c
+Debug: 842 370 target.c:1909 print_wa_layout():  * 0x20000000-0x2000003b (60 bytes)
+Debug: 843 370 target.c:1909 print_wa_layout():  * 0x2000003c-0x2000203b (8192 bytes)
+Debug: 844 370 target.c:1909 print_wa_layout():    0x2000203c-0x20003fff (8132 bytes)
+Debug: 845 370 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000044
+Debug: 846 370 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 847 371 target.c:2644 target_write_u32(): address: 0x20000040, value: 0x20000044
+Debug: 848 371 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000040 4 1
+Debug: 849 371 target.c:1794 target_call_event_callbacks(): target event 3 (resume-start) for core stm32f3x.cpu
+Debug: 850 371 hla_target.c:449 adapter_resume(): adapter_resume 0 0x20000000 1 1
+Debug: 851 371 target.c:2644 target_write_u32(): address: 0xe000edfc, value: 0x01000000
+Debug: 852 371 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe000edfc 4 1
+Debug: 853 371 armv7m.c:160 armv7m_restore_context():  
+Debug: 854 371 armv7m.c:405 armv7m_write_core_reg(): write xPSR value 0x01000000
+Debug: 855 372 armv7m.c:405 armv7m_write_core_reg(): write pc value 0x20000000
+Debug: 856 372 armv7m.c:405 armv7m_write_core_reg(): write r4 value 0x08000000
+Debug: 857 372 armv7m.c:405 armv7m_write_core_reg(): write r3 value 0x2000203c
+Debug: 858 373 armv7m.c:405 armv7m_write_core_reg(): write r2 value 0x2000003c
+Debug: 859 373 armv7m.c:405 armv7m_write_core_reg(): write r1 value 0x00001c00
+Debug: 860 374 armv7m.c:405 armv7m_write_core_reg(): write r0 value 0x40022000
+Debug: 861 374 target.c:2644 target_write_u32(): address: 0xe000edf8, value: 0x00000000
+Debug: 862 374 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe000edf8 4 1
+Debug: 863 374 target.c:1794 target_call_event_callbacks(): target event 18 (debug-resumed) for core stm32f3x.cpu
+Debug: 864 374 target.c:1794 target_call_event_callbacks(): target event 4 (resume-end) for core stm32f3x.cpu
+Debug: 865 374 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 866 374 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000044
+Debug: 867 374 target.c:1004 target_run_flash_async_algorithm(): offs 0x0 count 0x1c00 wp 0x20000044 rp 0x20000044
+Debug: 868 374 target.c:2348 target_write_buffer(): writing buffer of 8180 byte at 0x20000044
+Debug: 869 374 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000044 4 2045
+Debug: 870 430 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20002038
+Debug: 871 430 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 872 430 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 873 431 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x2000004e
+Debug: 874 431 target.c:1004 target_run_flash_async_algorithm(): offs 0x1ff4 count 0xc06 wp 0x20002038 rp 0x2000004e
+Debug: 875 431 target.c:2348 target_write_buffer(): writing buffer of 4 byte at 0x20002038
+Debug: 876 431 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20002038 4 1
+Debug: 877 431 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000044
+Debug: 878 431 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 879 431 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 880 432 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000074
+Debug: 881 432 target.c:1004 target_run_flash_async_algorithm(): offs 0x1ff8 count 0xc04 wp 0x20000044 rp 0x20000074
+Debug: 882 432 target.c:2348 target_write_buffer(): writing buffer of 44 byte at 0x20000044
+Debug: 883 432 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000044 4 11
+Debug: 884 432 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000070
+Debug: 885 432 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 886 432 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 887 433 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x2000009e
+Debug: 888 433 target.c:1004 target_run_flash_async_algorithm(): offs 0x2024 count 0xbee wp 0x20000070 rp 0x2000009e
+Debug: 889 433 target.c:2348 target_write_buffer(): writing buffer of 42 byte at 0x20000070
+Debug: 890 433 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000070 4 10
+Debug: 891 433 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000098 2 1
+Debug: 892 434 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x2000009a
+Debug: 893 434 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 894 434 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 895 434 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200000e0
+Debug: 896 434 target.c:1004 target_run_flash_async_algorithm(): offs 0x204e count 0xbd9 wp 0x2000009a rp 0x200000e0
+Debug: 897 434 target.c:2348 target_write_buffer(): writing buffer of 68 byte at 0x2000009a
+Debug: 898 434 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000009a 2 1
+Debug: 899 435 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000009c 4 16
+Debug: 900 435 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200000dc 2 1
+Debug: 901 436 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200000de
+Debug: 902 436 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 903 436 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 904 437 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000134
+Debug: 905 437 target.c:1004 target_run_flash_async_algorithm(): offs 0x2092 count 0xbb7 wp 0x200000de rp 0x20000134
+Debug: 906 437 target.c:2348 target_write_buffer(): writing buffer of 84 byte at 0x200000de
+Debug: 907 437 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200000de 2 1
+Debug: 908 437 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200000e0 4 20
+Debug: 909 438 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000130 2 1
+Debug: 910 439 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000132
+Debug: 911 439 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 912 439 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 913 439 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000196
+Debug: 914 439 target.c:1004 target_run_flash_async_algorithm(): offs 0x20e6 count 0xb8d wp 0x20000132 rp 0x20000196
+Debug: 915 439 target.c:2348 target_write_buffer(): writing buffer of 98 byte at 0x20000132
+Debug: 916 439 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000132 2 1
+Debug: 917 440 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000134 4 24
+Debug: 918 441 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000194
+Debug: 919 441 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 920 441 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 921 441 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200001e4
+Debug: 922 441 target.c:1004 target_run_flash_async_algorithm(): offs 0x2148 count 0xb5c wp 0x20000194 rp 0x200001e4
+Debug: 923 441 target.c:2348 target_write_buffer(): writing buffer of 76 byte at 0x20000194
+Debug: 924 441 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000194 4 19
+Debug: 925 442 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200001e0
+Debug: 926 442 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 927 442 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 928 443 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000216
+Debug: 929 443 target.c:1004 target_run_flash_async_algorithm(): offs 0x2194 count 0xb36 wp 0x200001e0 rp 0x20000216
+Debug: 930 443 target.c:2348 target_write_buffer(): writing buffer of 50 byte at 0x200001e0
+Debug: 931 443 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200001e0 4 12
+Debug: 932 443 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000210 2 1
+Debug: 933 444 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000212
+Debug: 934 444 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 935 444 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 936 444 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000256
+Debug: 937 444 target.c:1004 target_run_flash_async_algorithm(): offs 0x21c6 count 0xb1d wp 0x20000212 rp 0x20000256
+Debug: 938 444 target.c:2348 target_write_buffer(): writing buffer of 66 byte at 0x20000212
+Debug: 939 444 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000212 2 1
+Debug: 940 445 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000214 4 16
+Debug: 941 446 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000254
+Debug: 942 446 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 943 446 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 944 446 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x2000029c
+Debug: 945 446 target.c:1004 target_run_flash_async_algorithm(): offs 0x2208 count 0xafc wp 0x20000254 rp 0x2000029c
+Debug: 946 446 target.c:2348 target_write_buffer(): writing buffer of 68 byte at 0x20000254
+Debug: 947 446 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000254 4 17
+Debug: 948 447 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000298
+Debug: 949 447 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 950 447 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 951 448 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200002cc
+Debug: 952 448 target.c:1004 target_run_flash_async_algorithm(): offs 0x224c count 0xada wp 0x20000298 rp 0x200002cc
+Debug: 953 448 target.c:2348 target_write_buffer(): writing buffer of 48 byte at 0x20000298
+Debug: 954 448 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000298 4 12
+Debug: 955 448 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200002c8
+Debug: 956 448 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 957 448 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 958 449 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200002f8
+Debug: 959 449 target.c:1004 target_run_flash_async_algorithm(): offs 0x227c count 0xac2 wp 0x200002c8 rp 0x200002f8
+Debug: 960 449 target.c:2348 target_write_buffer(): writing buffer of 44 byte at 0x200002c8
+Debug: 961 449 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200002c8 4 11
+Debug: 962 449 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200002f4
+Debug: 963 449 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 964 450 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 965 450 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000324
+Debug: 966 450 target.c:1004 target_run_flash_async_algorithm(): offs 0x22a8 count 0xaac wp 0x200002f4 rp 0x20000324
+Debug: 967 450 target.c:2348 target_write_buffer(): writing buffer of 44 byte at 0x200002f4
+Debug: 968 450 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200002f4 4 11
+Debug: 969 450 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000320
+Debug: 970 450 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 971 451 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 972 451 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x2000034e
+Debug: 973 451 target.c:1004 target_run_flash_async_algorithm(): offs 0x22d4 count 0xa96 wp 0x20000320 rp 0x2000034e
+Debug: 974 451 target.c:2348 target_write_buffer(): writing buffer of 42 byte at 0x20000320
+Debug: 975 451 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000320 4 10
+Debug: 976 452 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000348 2 1
+Debug: 977 452 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x2000034a
+Debug: 978 452 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 979 452 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 980 453 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x2000038c
+Debug: 981 453 target.c:1004 target_run_flash_async_algorithm(): offs 0x22fe count 0xa81 wp 0x2000034a rp 0x2000038c
+Debug: 982 453 target.c:2348 target_write_buffer(): writing buffer of 64 byte at 0x2000034a
+Debug: 983 453 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000034a 2 1
+Debug: 984 453 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000034c 4 15
+Debug: 985 454 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000388 2 1
+Debug: 986 454 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x2000038a
+Debug: 987 454 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 988 455 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 989 455 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200003e0
+Debug: 990 455 target.c:1004 target_run_flash_async_algorithm(): offs 0x233e count 0xa61 wp 0x2000038a rp 0x200003e0
+Debug: 991 455 target.c:2348 target_write_buffer(): writing buffer of 84 byte at 0x2000038a
+Debug: 992 455 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000038a 2 1
+Debug: 993 456 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000038c 4 20
+Debug: 994 456 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200003dc 2 1
+Debug: 995 457 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200003de
+Debug: 996 457 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 997 457 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 998 458 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000444
+Debug: 999 458 target.c:1004 target_run_flash_async_algorithm(): offs 0x2392 count 0xa37 wp 0x200003de rp 0x20000444
+Debug: 1000 458 target.c:2348 target_write_buffer(): writing buffer of 100 byte at 0x200003de
+Debug: 1001 458 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200003de 2 1
+Debug: 1002 458 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200003e0 4 24
+Debug: 1003 459 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000440 2 1
+Debug: 1004 460 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000442
+Debug: 1005 460 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1006 460 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1007 460 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200004aa
+Debug: 1008 460 target.c:1004 target_run_flash_async_algorithm(): offs 0x23f6 count 0xa05 wp 0x20000442 rp 0x200004aa
+Debug: 1009 460 target.c:2348 target_write_buffer(): writing buffer of 102 byte at 0x20000442
+Debug: 1010 460 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000442 2 1
+Debug: 1011 461 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000444 4 25
+Debug: 1012 462 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200004a8
+Debug: 1013 462 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1014 462 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1015 462 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200004f4
+Debug: 1016 462 target.c:1004 target_run_flash_async_algorithm(): offs 0x245c count 0x9d2 wp 0x200004a8 rp 0x200004f4
+Debug: 1017 462 target.c:2348 target_write_buffer(): writing buffer of 72 byte at 0x200004a8
+Debug: 1018 462 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200004a8 4 18
+Debug: 1019 463 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200004f0
+Debug: 1020 463 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1021 463 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1022 464 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000524
+Debug: 1023 464 target.c:1004 target_run_flash_async_algorithm(): offs 0x24a4 count 0x9ae wp 0x200004f0 rp 0x20000524
+Debug: 1024 464 target.c:2348 target_write_buffer(): writing buffer of 48 byte at 0x200004f0
+Debug: 1025 464 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200004f0 4 12
+Debug: 1026 464 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000520
+Debug: 1027 464 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1028 464 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1029 465 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000552
+Debug: 1030 465 target.c:1004 target_run_flash_async_algorithm(): offs 0x24d4 count 0x996 wp 0x20000520 rp 0x20000552
+Debug: 1031 465 target.c:2348 target_write_buffer(): writing buffer of 46 byte at 0x20000520
+Debug: 1032 465 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000520 4 11
+Debug: 1033 465 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000054c 2 1
+Debug: 1034 466 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x2000054e
+Debug: 1035 466 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1036 466 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1037 466 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000590
+Debug: 1038 466 target.c:1004 target_run_flash_async_algorithm(): offs 0x2502 count 0x97f wp 0x2000054e rp 0x20000590
+Debug: 1039 466 target.c:2348 target_write_buffer(): writing buffer of 64 byte at 0x2000054e
+Debug: 1040 467 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000054e 2 1
+Debug: 1041 467 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000550 4 15
+Debug: 1042 468 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000058c 2 1
+Debug: 1043 468 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x2000058e
+Debug: 1044 468 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1045 468 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1046 469 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200005e8
+Debug: 1047 469 target.c:1004 target_run_flash_async_algorithm(): offs 0x2542 count 0x95f wp 0x2000058e rp 0x200005e8
+Debug: 1048 469 target.c:2348 target_write_buffer(): writing buffer of 88 byte at 0x2000058e
+Debug: 1049 469 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000058e 2 1
+Debug: 1050 469 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000590 4 21
+Debug: 1051 470 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200005e4 2 1
+Debug: 1052 471 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200005e6
+Debug: 1053 471 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1054 471 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1055 471 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000644
+Debug: 1056 471 target.c:1004 target_run_flash_async_algorithm(): offs 0x259a count 0x933 wp 0x200005e6 rp 0x20000644
+Debug: 1057 471 target.c:2348 target_write_buffer(): writing buffer of 92 byte at 0x200005e6
+Debug: 1058 471 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200005e6 2 1
+Debug: 1059 472 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200005e8 4 22
+Debug: 1060 473 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000640 2 1
+Debug: 1061 473 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000642
+Debug: 1062 473 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1063 473 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1064 474 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200006a2
+Debug: 1065 474 target.c:1004 target_run_flash_async_algorithm(): offs 0x25f6 count 0x905 wp 0x20000642 rp 0x200006a2
+Debug: 1066 474 target.c:2348 target_write_buffer(): writing buffer of 94 byte at 0x20000642
+Debug: 1067 474 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000642 2 1
+Debug: 1068 474 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000644 4 23
+Debug: 1069 475 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200006a0
+Debug: 1070 475 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1071 476 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1072 476 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200006ee
+Debug: 1073 476 target.c:1004 target_run_flash_async_algorithm(): offs 0x2654 count 0x8d6 wp 0x200006a0 rp 0x200006ee
+Debug: 1074 476 target.c:2348 target_write_buffer(): writing buffer of 74 byte at 0x200006a0
+Debug: 1075 476 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200006a0 4 18
+Debug: 1076 477 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200006e8 2 1
+Debug: 1077 477 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200006ea
+Debug: 1078 477 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1079 477 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1080 478 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000738
+Debug: 1081 478 target.c:1004 target_run_flash_async_algorithm(): offs 0x269e count 0x8b1 wp 0x200006ea rp 0x20000738
+Debug: 1082 478 target.c:2348 target_write_buffer(): writing buffer of 76 byte at 0x200006ea
+Debug: 1083 478 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200006ea 2 1
+Debug: 1084 478 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200006ec 4 18
+Debug: 1085 479 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000734 2 1
+Debug: 1086 480 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000736
+Debug: 1087 480 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1088 480 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1089 480 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000794
+Debug: 1090 480 target.c:1004 target_run_flash_async_algorithm(): offs 0x26ea count 0x88b wp 0x20000736 rp 0x20000794
+Debug: 1091 480 target.c:2348 target_write_buffer(): writing buffer of 92 byte at 0x20000736
+Debug: 1092 480 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000736 2 1
+Debug: 1093 481 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000738 4 22
+Debug: 1094 481 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000790 2 1
+Debug: 1095 482 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000792
+Debug: 1096 482 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1097 482 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1098 483 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200007ee
+Debug: 1099 483 target.c:1004 target_run_flash_async_algorithm(): offs 0x2746 count 0x85d wp 0x20000792 rp 0x200007ee
+Debug: 1100 483 target.c:2348 target_write_buffer(): writing buffer of 90 byte at 0x20000792
+Debug: 1101 483 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000792 2 1
+Debug: 1102 483 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000794 4 22
+Debug: 1103 484 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200007ec
+Debug: 1104 484 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1105 484 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1106 485 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x2000083a
+Debug: 1107 485 target.c:1004 target_run_flash_async_algorithm(): offs 0x27a0 count 0x830 wp 0x200007ec rp 0x2000083a
+Debug: 1108 485 target.c:2348 target_write_buffer(): writing buffer of 74 byte at 0x200007ec
+Debug: 1109 485 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200007ec 4 18
+Debug: 1110 485 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000834 2 1
+Debug: 1111 486 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000836
+Debug: 1112 486 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1113 486 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1114 487 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000884
+Debug: 1115 487 target.c:1004 target_run_flash_async_algorithm(): offs 0x27ea count 0x80b wp 0x20000836 rp 0x20000884
+Debug: 1116 487 target.c:2348 target_write_buffer(): writing buffer of 76 byte at 0x20000836
+Debug: 1117 487 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000836 2 1
+Debug: 1118 487 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000838 4 18
+Debug: 1119 488 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000880 2 1
+Debug: 1120 489 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000882
+Debug: 1121 489 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1122 489 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1123 489 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200008e0
+Debug: 1124 489 target.c:1004 target_run_flash_async_algorithm(): offs 0x2836 count 0x7e5 wp 0x20000882 rp 0x200008e0
+Debug: 1125 489 target.c:2348 target_write_buffer(): writing buffer of 92 byte at 0x20000882
+Debug: 1126 489 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000882 2 1
+Debug: 1127 490 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000884 4 22
+Debug: 1128 491 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200008dc 2 1
+Debug: 1129 491 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200008de
+Debug: 1130 491 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1131 492 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1132 492 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000946
+Debug: 1133 492 target.c:1004 target_run_flash_async_algorithm(): offs 0x2892 count 0x7b7 wp 0x200008de rp 0x20000946
+Debug: 1134 492 target.c:2348 target_write_buffer(): writing buffer of 102 byte at 0x200008de
+Debug: 1135 492 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200008de 2 1
+Debug: 1136 492 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200008e0 4 25
+Debug: 1137 493 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000944
+Debug: 1138 493 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1139 494 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1140 494 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000994
+Debug: 1141 494 target.c:1004 target_run_flash_async_algorithm(): offs 0x28f8 count 0x784 wp 0x20000944 rp 0x20000994
+Debug: 1142 494 target.c:2348 target_write_buffer(): writing buffer of 76 byte at 0x20000944
+Debug: 1143 494 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000944 4 19
+Debug: 1144 495 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000990
+Debug: 1145 495 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1146 495 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1147 495 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200009c8
+Debug: 1148 495 target.c:1004 target_run_flash_async_algorithm(): offs 0x2944 count 0x75e wp 0x20000990 rp 0x200009c8
+Debug: 1149 495 target.c:2348 target_write_buffer(): writing buffer of 52 byte at 0x20000990
+Debug: 1150 495 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000990 4 13
+Debug: 1151 496 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200009c4
+Debug: 1152 496 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1153 496 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1154 496 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200009f2
+Debug: 1155 497 target.c:1004 target_run_flash_async_algorithm(): offs 0x2978 count 0x744 wp 0x200009c4 rp 0x200009f2
+Debug: 1156 497 target.c:2348 target_write_buffer(): writing buffer of 42 byte at 0x200009c4
+Debug: 1157 497 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200009c4 4 10
+Debug: 1158 497 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200009ec 2 1
+Debug: 1159 497 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200009ee
+Debug: 1160 498 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1161 498 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1162 498 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000a30
+Debug: 1163 498 target.c:1004 target_run_flash_async_algorithm(): offs 0x29a2 count 0x72f wp 0x200009ee rp 0x20000a30
+Debug: 1164 498 target.c:2348 target_write_buffer(): writing buffer of 64 byte at 0x200009ee
+Debug: 1165 498 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200009ee 2 1
+Debug: 1166 499 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200009f0 4 15
+Debug: 1167 499 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000a2c 2 1
+Debug: 1168 500 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000a2e
+Debug: 1169 500 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1170 500 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1171 500 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000a84
+Debug: 1172 500 target.c:1004 target_run_flash_async_algorithm(): offs 0x29e2 count 0x70f wp 0x20000a2e rp 0x20000a84
+Debug: 1173 500 target.c:2348 target_write_buffer(): writing buffer of 84 byte at 0x20000a2e
+Debug: 1174 500 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000a2e 2 1
+Debug: 1175 501 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000a30 4 20
+Debug: 1176 502 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000a80 2 1
+Debug: 1177 502 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000a82
+Debug: 1178 502 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1180 503 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1181 503 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000ae6
+Debug: 1182 503 target.c:1004 target_run_flash_async_algorithm(): offs 0x2a36 count 0x6e5 wp 0x20000a82 rp 0x20000ae6
+Debug: 1183 503 target.c:2348 target_write_buffer(): writing buffer of 98 byte at 0x20000a82
+Debug: 1184 503 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000a82 2 1
+Debug: 1185 504 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000a84 4 24
+Debug: 1186 504 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000ae4
+Debug: 1187 504 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1188 505 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1189 505 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000b36
+Debug: 1190 505 target.c:1004 target_run_flash_async_algorithm(): offs 0x2a98 count 0x6b4 wp 0x20000ae4 rp 0x20000b36
+Debug: 1191 505 target.c:2348 target_write_buffer(): writing buffer of 78 byte at 0x20000ae4
+Debug: 1192 505 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000ae4 4 19
+Debug: 1193 506 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000b30 2 1
+Debug: 1194 506 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000b32
+Debug: 1195 506 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1196 507 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1197 507 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000b7c
+Debug: 1198 507 target.c:1004 target_run_flash_async_algorithm(): offs 0x2ae6 count 0x68d wp 0x20000b32 rp 0x20000b7c
+Debug: 1199 507 target.c:2348 target_write_buffer(): writing buffer of 72 byte at 0x20000b32
+Debug: 1200 507 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000b32 2 1
+Debug: 1201 508 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000b34 4 17
+Debug: 1202 508 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000b78 2 1
+Debug: 1203 509 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000b7a
+Debug: 1204 509 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1205 509 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1206 509 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000bd8
+Debug: 1207 509 target.c:1004 target_run_flash_async_algorithm(): offs 0x2b2e count 0x669 wp 0x20000b7a rp 0x20000bd8
+Debug: 1208 509 target.c:2348 target_write_buffer(): writing buffer of 92 byte at 0x20000b7a
+Debug: 1209 509 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000b7a 2 1
+Debug: 1210 510 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000b7c 4 22
+Debug: 1211 511 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000bd4 2 1
+Debug: 1212 511 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000bd6
+Debug: 1213 511 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1214 512 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1215 512 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000c3c
+Debug: 1216 512 target.c:1004 target_run_flash_async_algorithm(): offs 0x2b8a count 0x63b wp 0x20000bd6 rp 0x20000c3c
+Debug: 1217 512 target.c:2348 target_write_buffer(): writing buffer of 100 byte at 0x20000bd6
+Debug: 1218 512 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000bd6 2 1
+Debug: 1219 513 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000bd8 4 24
+Debug: 1220 514 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000c38 2 1
+Debug: 1221 514 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000c3a
+Debug: 1222 514 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1223 515 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1224 515 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000ca0
+Debug: 1225 515 target.c:1004 target_run_flash_async_algorithm(): offs 0x2bee count 0x609 wp 0x20000c3a rp 0x20000ca0
+Debug: 1226 515 target.c:2348 target_write_buffer(): writing buffer of 100 byte at 0x20000c3a
+Debug: 1227 515 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000c3a 2 1
+Debug: 1228 515 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000c3c 4 24
+Debug: 1229 516 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000c9c 2 1
+Debug: 1230 517 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000c9e
+Debug: 1231 517 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1232 517 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1233 517 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000d00
+Debug: 1234 517 target.c:1004 target_run_flash_async_algorithm(): offs 0x2c52 count 0x5d7 wp 0x20000c9e rp 0x20000d00
+Debug: 1235 517 target.c:2348 target_write_buffer(): writing buffer of 96 byte at 0x20000c9e
+Debug: 1236 517 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000c9e 2 1
+Debug: 1237 518 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000ca0 4 23
+Debug: 1238 519 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000cfc 2 1
+Debug: 1239 519 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000cfe
+Debug: 1240 519 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1241 520 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1242 520 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000d66
+Debug: 1243 520 target.c:1004 target_run_flash_async_algorithm(): offs 0x2cb2 count 0x5a7 wp 0x20000cfe rp 0x20000d66
+Debug: 1244 520 target.c:2348 target_write_buffer(): writing buffer of 102 byte at 0x20000cfe
+Debug: 1245 520 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000cfe 2 1
+Debug: 1246 521 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000d00 4 25
+Debug: 1247 522 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000d64
+Debug: 1248 522 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1249 522 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1250 522 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000db8
+Debug: 1251 522 target.c:1004 target_run_flash_async_algorithm(): offs 0x2d18 count 0x574 wp 0x20000d64 rp 0x20000db8
+Debug: 1252 522 target.c:2348 target_write_buffer(): writing buffer of 80 byte at 0x20000d64
+Debug: 1253 522 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000d64 4 20
+Debug: 1254 523 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000db4
+Debug: 1255 523 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1256 523 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1257 524 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000df2
+Debug: 1258 524 target.c:1004 target_run_flash_async_algorithm(): offs 0x2d68 count 0x54c wp 0x20000db4 rp 0x20000df2
+Debug: 1259 524 target.c:2348 target_write_buffer(): writing buffer of 58 byte at 0x20000db4
+Debug: 1260 524 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000db4 4 14
+Debug: 1261 524 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000dec 2 1
+Debug: 1262 525 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000dee
+Debug: 1263 525 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1264 525 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1265 526 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000e38
+Debug: 1266 526 target.c:1004 target_run_flash_async_algorithm(): offs 0x2da2 count 0x52f wp 0x20000dee rp 0x20000e38
+Debug: 1267 526 target.c:2348 target_write_buffer(): writing buffer of 72 byte at 0x20000dee
+Debug: 1268 526 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000dee 2 1
+Debug: 1269 526 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000df0 4 17
+Debug: 1270 527 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000e34 2 1
+Debug: 1271 528 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000e36
+Debug: 1272 528 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1273 528 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1274 528 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000e98
+Debug: 1275 528 target.c:1004 target_run_flash_async_algorithm(): offs 0x2dea count 0x50b wp 0x20000e36 rp 0x20000e98
+Debug: 1276 528 target.c:2348 target_write_buffer(): writing buffer of 96 byte at 0x20000e36
+Debug: 1277 528 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000e36 2 1
+Debug: 1278 529 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000e38 4 23
+Debug: 1279 530 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000e94 2 1
+Debug: 1280 530 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000e96
+Debug: 1281 530 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1282 531 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1283 531 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000efa
+Debug: 1284 531 target.c:1004 target_run_flash_async_algorithm(): offs 0x2e4a count 0x4db wp 0x20000e96 rp 0x20000efa
+Debug: 1285 531 target.c:2348 target_write_buffer(): writing buffer of 98 byte at 0x20000e96
+Debug: 1286 531 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000e96 2 1
+Debug: 1287 531 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000e98 4 24
+Debug: 1288 532 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000ef8
+Debug: 1289 532 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1290 533 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1291 533 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000f48
+Debug: 1292 533 target.c:1004 target_run_flash_async_algorithm(): offs 0x2eac count 0x4aa wp 0x20000ef8 rp 0x20000f48
+Debug: 1293 533 target.c:2348 target_write_buffer(): writing buffer of 76 byte at 0x20000ef8
+Debug: 1294 533 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000ef8 4 19
+Debug: 1295 534 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000f44
+Debug: 1296 534 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1297 534 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1298 534 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000f7a
+Debug: 1299 534 target.c:1004 target_run_flash_async_algorithm(): offs 0x2ef8 count 0x484 wp 0x20000f44 rp 0x20000f7a
+Debug: 1300 534 target.c:2348 target_write_buffer(): writing buffer of 50 byte at 0x20000f44
+Debug: 1301 534 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000f44 4 12
+Debug: 1302 535 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000f74 2 1
+Debug: 1303 535 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000f76
+Debug: 1304 535 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1305 536 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1306 536 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000fba
+Debug: 1307 536 target.c:1004 target_run_flash_async_algorithm(): offs 0x2f2a count 0x46b wp 0x20000f76 rp 0x20000fba
+Debug: 1308 536 target.c:2348 target_write_buffer(): writing buffer of 66 byte at 0x20000f76
+Debug: 1309 536 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000f76 2 1
+Debug: 1310 537 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000f78 4 16
+Debug: 1311 537 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000fb8
+Debug: 1312 537 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1313 537 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1314 538 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20000ffe
+Debug: 1315 538 target.c:1004 target_run_flash_async_algorithm(): offs 0x2f6c count 0x44a wp 0x20000fb8 rp 0x20000ffe
+Debug: 1316 538 target.c:2348 target_write_buffer(): writing buffer of 66 byte at 0x20000fb8
+Debug: 1317 538 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000fb8 4 16
+Debug: 1318 538 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000ff8 2 1
+Debug: 1319 539 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20000ffa
+Debug: 1320 539 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1321 539 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1322 540 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20001042
+Debug: 1323 540 target.c:1004 target_run_flash_async_algorithm(): offs 0x2fae count 0x429 wp 0x20000ffa rp 0x20001042
+Debug: 1324 540 target.c:2348 target_write_buffer(): writing buffer of 70 byte at 0x20000ffa
+Debug: 1325 540 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000ffa 2 1
+Debug: 1326 540 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000ffc 4 17
+Debug: 1327 541 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20001040
+Debug: 1328 541 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1329 542 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1330 542 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20001098
+Debug: 1331 542 target.c:1004 target_run_flash_async_algorithm(): offs 0x2ff4 count 0x406 wp 0x20001040 rp 0x20001098
+Debug: 1332 542 target.c:2348 target_write_buffer(): writing buffer of 84 byte at 0x20001040
+Debug: 1333 542 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001040 4 21
+Debug: 1334 543 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20001094
+Debug: 1335 543 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1336 543 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1337 543 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200010cc
+Debug: 1338 543 target.c:1004 target_run_flash_async_algorithm(): offs 0x3048 count 0x3dc wp 0x20001094 rp 0x200010cc
+Debug: 1339 543 target.c:2348 target_write_buffer(): writing buffer of 52 byte at 0x20001094
+Debug: 1340 543 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001094 4 13
+Debug: 1341 544 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200010c8
+Debug: 1342 544 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1343 544 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1344 545 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200010fc
+Debug: 1345 545 target.c:1004 target_run_flash_async_algorithm(): offs 0x307c count 0x3c2 wp 0x200010c8 rp 0x200010fc
+Debug: 1346 545 target.c:2348 target_write_buffer(): writing buffer of 48 byte at 0x200010c8
+Debug: 1347 545 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200010c8 4 12
+Debug: 1348 545 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200010f8
+Debug: 1349 545 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1350 546 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1351 546 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x2000112a
+Debug: 1352 546 target.c:1004 target_run_flash_async_algorithm(): offs 0x30ac count 0x3aa wp 0x200010f8 rp 0x2000112a
+Debug: 1353 546 target.c:2348 target_write_buffer(): writing buffer of 46 byte at 0x200010f8
+Debug: 1354 546 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200010f8 4 11
+Debug: 1355 546 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001124 2 1
+Debug: 1356 547 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20001126
+Debug: 1357 547 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1358 547 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1359 548 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x2000116c
+Debug: 1360 548 target.c:1004 target_run_flash_async_algorithm(): offs 0x30da count 0x393 wp 0x20001126 rp 0x2000116c
+Debug: 1361 548 target.c:2348 target_write_buffer(): writing buffer of 68 byte at 0x20001126
+Debug: 1362 548 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001126 2 1
+Debug: 1363 548 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001128 4 16
+Debug: 1364 549 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001168 2 1
+Debug: 1365 549 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x2000116a
+Debug: 1366 549 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1367 550 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1368 550 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200011c2
+Debug: 1369 550 target.c:1004 target_run_flash_async_algorithm(): offs 0x311e count 0x371 wp 0x2000116a rp 0x200011c2
+Debug: 1370 550 target.c:2348 target_write_buffer(): writing buffer of 86 byte at 0x2000116a
+Debug: 1371 550 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000116a 2 1
+Debug: 1372 550 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000116c 4 21
+Debug: 1373 551 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200011c0
+Debug: 1374 551 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1375 552 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1376 552 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x2000120e
+Debug: 1377 552 target.c:1004 target_run_flash_async_algorithm(): offs 0x3174 count 0x346 wp 0x200011c0 rp 0x2000120e
+Debug: 1378 552 target.c:2348 target_write_buffer(): writing buffer of 74 byte at 0x200011c0
+Debug: 1379 552 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200011c0 4 18
+Debug: 1380 553 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001208 2 1
+Debug: 1381 553 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x2000120a
+Debug: 1382 553 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1383 554 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1384 554 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20001258
+Debug: 1385 554 target.c:1004 target_run_flash_async_algorithm(): offs 0x31be count 0x321 wp 0x2000120a rp 0x20001258
+Debug: 1386 554 target.c:2348 target_write_buffer(): writing buffer of 76 byte at 0x2000120a
+Debug: 1387 554 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000120a 2 1
+Debug: 1388 554 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000120c 4 18
+Debug: 1389 555 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001254 2 1
+Debug: 1390 556 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20001256
+Debug: 1391 556 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1392 556 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1393 556 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200012b0
+Debug: 1394 556 target.c:1004 target_run_flash_async_algorithm(): offs 0x320a count 0x2fb wp 0x20001256 rp 0x200012b0
+Debug: 1395 556 target.c:2348 target_write_buffer(): writing buffer of 88 byte at 0x20001256
+Debug: 1396 556 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001256 2 1
+Debug: 1397 557 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001258 4 21
+Debug: 1398 557 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200012ac 2 1
+Debug: 1399 558 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200012ae
+Debug: 1400 558 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1401 558 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1402 559 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20001308
+Debug: 1403 559 target.c:1004 target_run_flash_async_algorithm(): offs 0x3262 count 0x2cf wp 0x200012ae rp 0x20001308
+Debug: 1404 559 target.c:2348 target_write_buffer(): writing buffer of 88 byte at 0x200012ae
+Debug: 1405 559 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200012ae 2 1
+Debug: 1406 559 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200012b0 4 21
+Debug: 1407 560 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001304 2 1
+Debug: 1408 560 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20001306
+Debug: 1409 560 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1410 561 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1411 561 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20001366
+Debug: 1412 561 target.c:1004 target_run_flash_async_algorithm(): offs 0x32ba count 0x2a3 wp 0x20001306 rp 0x20001366
+Debug: 1413 561 target.c:2348 target_write_buffer(): writing buffer of 94 byte at 0x20001306
+Debug: 1414 561 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001306 2 1
+Debug: 1415 562 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001308 4 23
+Debug: 1416 562 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20001364
+Debug: 1417 562 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1418 563 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1419 563 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200013b0
+Debug: 1420 563 target.c:1004 target_run_flash_async_algorithm(): offs 0x3318 count 0x274 wp 0x20001364 rp 0x200013b0
+Debug: 1421 563 target.c:2348 target_write_buffer(): writing buffer of 72 byte at 0x20001364
+Debug: 1422 563 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001364 4 18
+Debug: 1423 564 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200013ac
+Debug: 1424 564 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1425 564 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1426 565 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200013e6
+Debug: 1427 565 target.c:1004 target_run_flash_async_algorithm(): offs 0x3360 count 0x250 wp 0x200013ac rp 0x200013e6
+Debug: 1428 565 target.c:2348 target_write_buffer(): writing buffer of 54 byte at 0x200013ac
+Debug: 1429 565 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200013ac 4 13
+Debug: 1430 565 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200013e0 2 1
+Debug: 1431 566 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200013e2
+Debug: 1432 566 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1433 566 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1434 566 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20001428
+Debug: 1435 566 target.c:1004 target_run_flash_async_algorithm(): offs 0x3396 count 0x235 wp 0x200013e2 rp 0x20001428
+Debug: 1436 566 target.c:2348 target_write_buffer(): writing buffer of 68 byte at 0x200013e2
+Debug: 1437 566 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200013e2 2 1
+Debug: 1438 567 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200013e4 4 16
+Debug: 1439 567 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001424 2 1
+Debug: 1440 568 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20001426
+Debug: 1441 568 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1442 568 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1443 569 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20001478
+Debug: 1444 569 target.c:1004 target_run_flash_async_algorithm(): offs 0x33da count 0x213 wp 0x20001426 rp 0x20001478
+Debug: 1445 569 target.c:2348 target_write_buffer(): writing buffer of 80 byte at 0x20001426
+Debug: 1446 569 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001426 2 1
+Debug: 1447 569 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001428 4 19
+Debug: 1448 570 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001474 2 1
+Debug: 1449 570 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20001476
+Debug: 1450 570 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1451 571 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1452 571 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200014da
+Debug: 1453 571 target.c:1004 target_run_flash_async_algorithm(): offs 0x342a count 0x1eb wp 0x20001476 rp 0x200014da
+Debug: 1454 571 target.c:2348 target_write_buffer(): writing buffer of 98 byte at 0x20001476
+Debug: 1455 571 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001476 2 1
+Debug: 1456 572 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001478 4 24
+Debug: 1457 573 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200014d8
+Debug: 1458 573 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1459 573 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1460 573 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20001528
+Debug: 1461 573 target.c:1004 target_run_flash_async_algorithm(): offs 0x348c count 0x1ba wp 0x200014d8 rp 0x20001528
+Debug: 1462 573 target.c:2348 target_write_buffer(): writing buffer of 76 byte at 0x200014d8
+Debug: 1463 573 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200014d8 4 19
+Debug: 1464 574 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20001524
+Debug: 1465 574 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1466 574 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1467 575 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x2000155c
+Debug: 1468 575 target.c:1004 target_run_flash_async_algorithm(): offs 0x34d8 count 0x194 wp 0x20001524 rp 0x2000155c
+Debug: 1469 575 target.c:2348 target_write_buffer(): writing buffer of 52 byte at 0x20001524
+Debug: 1470 575 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001524 4 13
+Debug: 1471 575 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20001558
+Debug: 1472 575 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1473 575 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1474 576 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x2000158a
+Debug: 1475 576 target.c:1004 target_run_flash_async_algorithm(): offs 0x350c count 0x17a wp 0x20001558 rp 0x2000158a
+Debug: 1476 576 target.c:2348 target_write_buffer(): writing buffer of 46 byte at 0x20001558
+Debug: 1477 576 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001558 4 11
+Debug: 1478 576 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001584 2 1
+Debug: 1479 577 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20001586
+Debug: 1480 577 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1481 577 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1482 578 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200015c8
+Debug: 1483 578 target.c:1004 target_run_flash_async_algorithm(): offs 0x353a count 0x163 wp 0x20001586 rp 0x200015c8
+Debug: 1484 578 target.c:2348 target_write_buffer(): writing buffer of 64 byte at 0x20001586
+Debug: 1485 578 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001586 2 1
+Debug: 1486 578 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001588 4 15
+Debug: 1487 579 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200015c4 2 1
+Debug: 1488 579 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200015c6
+Debug: 1489 579 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1490 579 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1491 580 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20001620
+Debug: 1492 580 target.c:1004 target_run_flash_async_algorithm(): offs 0x357a count 0x143 wp 0x200015c6 rp 0x20001620
+Debug: 1493 580 target.c:2348 target_write_buffer(): writing buffer of 88 byte at 0x200015c6
+Debug: 1494 580 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200015c6 2 1
+Debug: 1495 580 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200015c8 4 21
+Debug: 1496 581 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000161c 2 1
+Debug: 1497 582 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x2000161e
+Debug: 1498 582 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1499 582 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1500 582 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x2000167e
+Debug: 1501 582 target.c:1004 target_run_flash_async_algorithm(): offs 0x35d2 count 0x117 wp 0x2000161e rp 0x2000167e
+Debug: 1502 582 target.c:2348 target_write_buffer(): writing buffer of 94 byte at 0x2000161e
+Debug: 1503 582 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000161e 2 1
+Debug: 1504 583 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001620 4 23
+Debug: 1505 584 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x2000167c
+Debug: 1506 584 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1507 584 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1508 584 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200016c8
+Debug: 1509 584 target.c:1004 target_run_flash_async_algorithm(): offs 0x3630 count 0xe8 wp 0x2000167c rp 0x200016c8
+Debug: 1510 584 target.c:2348 target_write_buffer(): writing buffer of 72 byte at 0x2000167c
+Debug: 1511 584 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000167c 4 18
+Debug: 1512 585 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200016c4
+Debug: 1513 585 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1514 585 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1515 586 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200016fe
+Debug: 1516 586 target.c:1004 target_run_flash_async_algorithm(): offs 0x3678 count 0xc4 wp 0x200016c4 rp 0x200016fe
+Debug: 1517 586 target.c:2348 target_write_buffer(): writing buffer of 54 byte at 0x200016c4
+Debug: 1518 586 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200016c4 4 13
+Debug: 1519 586 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200016f8 2 1
+Debug: 1520 587 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200016fa
+Debug: 1521 587 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1522 587 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1523 588 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20001746
+Debug: 1524 588 target.c:1004 target_run_flash_async_algorithm(): offs 0x36ae count 0xa9 wp 0x200016fa rp 0x20001746
+Debug: 1525 588 target.c:2348 target_write_buffer(): writing buffer of 74 byte at 0x200016fa
+Debug: 1526 588 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200016fa 2 1
+Debug: 1527 588 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200016fc 4 18
+Debug: 1528 589 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20001744
+Debug: 1529 589 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1530 589 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1531 590 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x20001796
+Debug: 1532 590 target.c:1004 target_run_flash_async_algorithm(): offs 0x36f8 count 0x84 wp 0x20001744 rp 0x20001796
+Debug: 1533 590 target.c:2348 target_write_buffer(): writing buffer of 78 byte at 0x20001744
+Debug: 1534 590 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001744 4 19
+Debug: 1535 591 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001790 2 1
+Debug: 1536 591 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x20001792
+Debug: 1537 591 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1538 592 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1539 592 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x200017e2
+Debug: 1540 592 target.c:1004 target_run_flash_async_algorithm(): offs 0x3746 count 0x5d wp 0x20001792 rp 0x200017e2
+Debug: 1541 592 target.c:2348 target_write_buffer(): writing buffer of 78 byte at 0x20001792
+Debug: 1542 592 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001792 2 1
+Debug: 1543 592 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001794 4 19
+Debug: 1544 593 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x200017e0
+Debug: 1545 593 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1546 594 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1547 594 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x2000182e
+Debug: 1548 594 target.c:1004 target_run_flash_async_algorithm(): offs 0x3794 count 0x36 wp 0x200017e0 rp 0x2000182e
+Debug: 1549 594 target.c:2348 target_write_buffer(): writing buffer of 74 byte at 0x200017e0
+Debug: 1550 594 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x200017e0 4 18
+Debug: 1551 595 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20001828 2 1
+Debug: 1552 595 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x2000182a
+Debug: 1553 595 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1554 596 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1555 596 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x2000187a
+Debug: 1556 596 target.c:1004 target_run_flash_async_algorithm(): offs 0x37de count 0x11 wp 0x2000182a rp 0x2000187a
+Debug: 1557 596 target.c:2348 target_write_buffer(): writing buffer of 34 byte at 0x2000182a
+Debug: 1558 596 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000182a 2 1
+Debug: 1559 596 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000182c 4 8
+Debug: 1560 597 target.c:2644 target_write_u32(): address: 0x2000003c, value: 0x2000184c
+Debug: 1561 597 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x2000003c 4 1
+Debug: 1562 597 target.c:3210 target_wait_state(): waiting for target halted...
+Debug: 1563 813 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0xe000edf8 4 1
+Debug: 1564 814 target.c:2556 target_read_u32(): address: 0xe000edf8, value: 0x00000000
+Debug: 1565 814 armv7m.c:341 armv7m_read_core_reg(): read r0 value 0x00000020
+Debug: 1566 814 armv7m.c:341 armv7m_read_core_reg(): read r1 value 0x00000000
+Debug: 1567 814 armv7m.c:341 armv7m_read_core_reg(): read r2 value 0x2000003c
+Debug: 1568 815 armv7m.c:341 armv7m_read_core_reg(): read r3 value 0x2000203c
+Debug: 1569 815 armv7m.c:341 armv7m_read_core_reg(): read r4 value 0x08003800
+Debug: 1570 815 armv7m.c:341 armv7m_read_core_reg(): read r5 value 0x2000184c
+Debug: 1571 815 armv7m.c:341 armv7m_read_core_reg(): read r6 value 0x00000020
+Debug: 1572 816 armv7m.c:341 armv7m_read_core_reg(): read r7 value 0x00000014
+Debug: 1573 816 armv7m.c:341 armv7m_read_core_reg(): read r8 value 0x00000000
+Debug: 1574 816 armv7m.c:341 armv7m_read_core_reg(): read r9 value 0x00000000
+Debug: 1575 816 armv7m.c:341 armv7m_read_core_reg(): read r10 value 0x00000000
+Debug: 1576 816 armv7m.c:341 armv7m_read_core_reg(): read r11 value 0x00000000
+Debug: 1577 817 armv7m.c:341 armv7m_read_core_reg(): read r12 value 0x00000000
+Debug: 1578 817 armv7m.c:341 armv7m_read_core_reg(): read sp value 0x20003000
+Debug: 1579 817 armv7m.c:341 armv7m_read_core_reg(): read lr value 0xffffffff
+Debug: 1580 817 armv7m.c:341 armv7m_read_core_reg(): read pc value 0x2000003a
+Debug: 1581 818 armv7m.c:341 armv7m_read_core_reg(): read xPSR value 0x61000000
+Debug: 1582 818 armv7m.c:341 armv7m_read_core_reg(): read msp value 0x20003000
+Debug: 1583 818 armv7m.c:341 armv7m_read_core_reg(): read psp value 0x00000000
+Debug: 1584 818 armv7m.c:341 armv7m_read_core_reg(): read pmsk_bpri_fltmsk_ctrl value 0x00000000
+Debug: 1585 819 armv7m.c:339 armv7m_read_core_reg(): read d0 value 0x0000000000000000
+Debug: 1586 819 armv7m.c:339 armv7m_read_core_reg(): read d1 value 0x0000000000000000
+Debug: 1587 819 armv7m.c:339 armv7m_read_core_reg(): read d2 value 0x0000000000000000
+Debug: 1588 820 armv7m.c:339 armv7m_read_core_reg(): read d3 value 0x0000000000000000
+Debug: 1589 820 armv7m.c:339 armv7m_read_core_reg(): read d4 value 0x0000000000000000
+Debug: 1590 821 armv7m.c:339 armv7m_read_core_reg(): read d5 value 0x0000000000000000
+Debug: 1591 821 armv7m.c:339 armv7m_read_core_reg(): read d6 value 0x0000000000000000
+Debug: 1592 821 armv7m.c:339 armv7m_read_core_reg(): read d7 value 0x0000000000000000
+Debug: 1593 822 armv7m.c:339 armv7m_read_core_reg(): read d8 value 0x0000000000000000
+Debug: 1594 822 armv7m.c:339 armv7m_read_core_reg(): read d9 value 0x0000000000000000
+Debug: 1595 823 armv7m.c:339 armv7m_read_core_reg(): read d10 value 0x0000000000000000
+Debug: 1596 823 armv7m.c:339 armv7m_read_core_reg(): read d11 value 0x0000000000000000
+Debug: 1597 824 armv7m.c:339 armv7m_read_core_reg(): read d12 value 0x0000000000000000
+Debug: 1598 824 armv7m.c:339 armv7m_read_core_reg(): read d13 value 0x0000000000000000
+Debug: 1599 824 armv7m.c:339 armv7m_read_core_reg(): read d14 value 0x0000000000000000
+Debug: 1600 825 armv7m.c:339 armv7m_read_core_reg(): read d15 value 0x0000000000000000
+Debug: 1601 825 armv7m.c:341 armv7m_read_core_reg(): read fpscr value 0x00000000
+Debug: 1602 825 hla_target.c:286 adapter_debug_entry(): entered debug state in core mode: Thread at PC 0x2000003a, target->state: halted
+Debug: 1603 825 target.c:1794 target_call_event_callbacks(): target event 17 (debug-halted) for core stm32f3x.cpu
+Debug: 1604 825 hla_target.c:331 adapter_poll(): halted: PC: 0x2000003a
+Debug: 1605 825 armv7m.c:658 armv7m_wait_algorithm(): restoring register xPSR with value 0x01000000
+Debug: 1606 825 armv7m.c:658 armv7m_wait_algorithm(): restoring register pc with value 0x08000740
+Debug: 1607 825 armv7m.c:658 armv7m_wait_algorithm(): restoring register r7 with value 0x00000000
+Debug: 1608 825 armv7m.c:658 armv7m_wait_algorithm(): restoring register r6 with value 0x00000000
+Debug: 1609 825 armv7m.c:658 armv7m_wait_algorithm(): restoring register r5 with value 0x00000000
+Debug: 1610 825 armv7m.c:658 armv7m_wait_algorithm(): restoring register r4 with value 0x00000000
+Debug: 1611 825 armv7m.c:658 armv7m_wait_algorithm(): restoring register r3 with value 0x00000000
+Debug: 1612 825 armv7m.c:658 armv7m_wait_algorithm(): restoring register r2 with value 0x00000000
+Debug: 1613 825 armv7m.c:658 armv7m_wait_algorithm(): restoring register r0 with value 0x00000000
+Debug: 1614 825 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x20000040 4 1
+Debug: 1615 826 target.c:2556 target_read_u32(): address: 0x20000040, value: 0x2000184c
+Debug: 1616 826 target.c:2112 target_free_working_area_restore(): freed 8192 bytes of working area at address 0x2000003c
+Debug: 1617 826 target.c:1909 print_wa_layout():  * 0x20000000-0x2000003b (60 bytes)
+Debug: 1618 826 target.c:1909 print_wa_layout():    0x2000003c-0x20003fff (16324 bytes)
+Debug: 1619 826 target.c:2112 target_free_working_area_restore(): freed 60 bytes of working area at address 0x20000000
+Debug: 1620 826 target.c:1909 print_wa_layout():    0x20000000-0x20003fff (16384 bytes)
+Debug: 1621 826 target.c:2644 target_write_u32(): address: 0x40022010, value: 0x00000080
+Debug: 1622 826 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x40022010 4 1
+Debug: 1623 826 command.c:146 script_debug(): command - echo ** Programming Finished **
+User : 1625 826 command.c:769 jim_echo(): ** Programming Finished **
+Debug: 1626 826 command.c:146 script_debug(): command - echo ** Verify Started **
+User : 1628 826 command.c:769 jim_echo(): ** Verify Started **
+Debug: 1629 827 command.c:146 script_debug(): command - verify_image main.elf
+Debug: 1631 827 configuration.c:97 find_file(): found main.elf
+Debug: 1632 827 image.c:69 autodetect_image_type(): ELF image detected.
+Debug: 1633 827 configuration.c:97 find_file(): found main.elf
+Debug: 1634 827 image.c:493 image_elf_read_section(): load segment 0 at 0x0 (sz = 0x30ac)
+Debug: 1635 827 image.c:499 image_elf_read_section(): read elf: size = 0x30ac at 0x10000
+Debug: 1636 827 image.c:1025 image_calculate_checksum(): Calculating checksum
+Debug: 1637 827 image.c:1055 image_calculate_checksum(): Calculating checksum done
+Debug: 1638 827 target.c:2043 target_alloc_working_area_try(): allocated new working area of 52 bytes at address 0x20000000
+Debug: 1639 827 target.c:1909 print_wa_layout():  * 0x20000000-0x20000033 (52 bytes)
+Debug: 1640 827 target.c:1909 print_wa_layout():    0x20000034-0x20003fff (16332 bytes)
+Debug: 1641 827 target.c:2348 target_write_buffer(): writing buffer of 52 byte at 0x20000000
+Debug: 1642 827 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000000 4 13
+Debug: 1643 827 target.c:1794 target_call_event_callbacks(): target event 3 (resume-start) for core stm32f3x.cpu
+Debug: 1644 827 hla_target.c:449 adapter_resume(): adapter_resume 0 0x20000000 1 1
+Debug: 1645 828 target.c:2644 target_write_u32(): address: 0xe000edfc, value: 0x01000000
+Debug: 1646 828 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe000edfc 4 1
+Debug: 1647 828 armv7m.c:160 armv7m_restore_context():  
+Debug: 1648 828 armv7m.c:405 armv7m_write_core_reg(): write xPSR value 0x01000000
+Debug: 1649 828 armv7m.c:405 armv7m_write_core_reg(): write pc value 0x20000000
+Debug: 1650 829 armv7m.c:405 armv7m_write_core_reg(): write r7 value 0x00000000
+Debug: 1651 829 armv7m.c:405 armv7m_write_core_reg(): write r6 value 0x00000000
+Debug: 1652 829 armv7m.c:405 armv7m_write_core_reg(): write r5 value 0x00000000
+Debug: 1653 830 armv7m.c:405 armv7m_write_core_reg(): write r4 value 0x00000000
+Debug: 1654 830 armv7m.c:405 armv7m_write_core_reg(): write r3 value 0x00000000
+Debug: 1655 830 armv7m.c:405 armv7m_write_core_reg(): write r2 value 0x00000000
+Debug: 1656 831 armv7m.c:405 armv7m_write_core_reg(): write r1 value 0x000030ac
+Debug: 1657 831 armv7m.c:405 armv7m_write_core_reg(): write r0 value 0x08000000
+Debug: 1658 831 target.c:2644 target_write_u32(): address: 0xe000edf8, value: 0x00000000
+Debug: 1659 831 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe000edf8 4 1
+Debug: 1660 831 target.c:1794 target_call_event_callbacks(): target event 18 (debug-resumed) for core stm32f3x.cpu
+Debug: 1661 831 target.c:1794 target_call_event_callbacks(): target event 4 (resume-end) for core stm32f3x.cpu
+Debug: 1662 832 target.c:3210 target_wait_state(): waiting for target halted...
+Debug: 1663 854 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0xe000edf8 4 1
+Debug: 1664 855 target.c:2556 target_read_u32(): address: 0xe000edf8, value: 0x00000000
+Debug: 1665 855 armv7m.c:341 armv7m_read_core_reg(): read r0 value 0x2640438c
+Debug: 1666 855 armv7m.c:341 armv7m_read_core_reg(): read r1 value 0x00000000
+Debug: 1667 855 armv7m.c:341 armv7m_read_core_reg(): read r2 value 0x08000000
+Debug: 1668 856 armv7m.c:341 armv7m_read_core_reg(): read r3 value 0x000030ac
+Debug: 1669 856 armv7m.c:341 armv7m_read_core_reg(): read r4 value 0x000030ac
+Debug: 1670 856 armv7m.c:341 armv7m_read_core_reg(): read r5 value 0x00000008
+Debug: 1671 856 armv7m.c:341 armv7m_read_core_reg(): read r6 value 0x04c11db7
+Debug: 1672 856 armv7m.c:341 armv7m_read_core_reg(): read r7 value 0x00000000
+Debug: 1673 857 armv7m.c:341 armv7m_read_core_reg(): read r8 value 0x00000000
+Debug: 1674 857 armv7m.c:341 armv7m_read_core_reg(): read r9 value 0x00000000
+Debug: 1675 857 armv7m.c:341 armv7m_read_core_reg(): read r10 value 0x00000000
+Debug: 1676 857 armv7m.c:341 armv7m_read_core_reg(): read r11 value 0x00000000
+Debug: 1677 857 armv7m.c:341 armv7m_read_core_reg(): read r12 value 0x00000000
+Debug: 1678 858 armv7m.c:341 armv7m_read_core_reg(): read sp value 0x20003000
+Debug: 1679 858 armv7m.c:341 armv7m_read_core_reg(): read lr value 0xffffffff
+Debug: 1680 858 armv7m.c:341 armv7m_read_core_reg(): read pc value 0x2000002e
+Debug: 1681 858 armv7m.c:341 armv7m_read_core_reg(): read xPSR value 0x61000000
+Debug: 1682 859 armv7m.c:341 armv7m_read_core_reg(): read msp value 0x20003000
+Debug: 1683 859 armv7m.c:341 armv7m_read_core_reg(): read psp value 0x00000000
+Debug: 1684 859 armv7m.c:341 armv7m_read_core_reg(): read pmsk_bpri_fltmsk_ctrl value 0x00000000
+Debug: 1685 860 armv7m.c:339 armv7m_read_core_reg(): read d0 value 0x0000000000000000
+Debug: 1686 860 armv7m.c:339 armv7m_read_core_reg(): read d1 value 0x0000000000000000
+Debug: 1687 860 armv7m.c:339 armv7m_read_core_reg(): read d2 value 0x0000000000000000
+Debug: 1688 861 armv7m.c:339 armv7m_read_core_reg(): read d3 value 0x0000000000000000
+Debug: 1689 861 armv7m.c:339 armv7m_read_core_reg(): read d4 value 0x0000000000000000
+Debug: 1690 862 armv7m.c:339 armv7m_read_core_reg(): read d5 value 0x0000000000000000
+Debug: 1691 862 armv7m.c:339 armv7m_read_core_reg(): read d6 value 0x0000000000000000
+Debug: 1692 863 armv7m.c:339 armv7m_read_core_reg(): read d7 value 0x0000000000000000
+Debug: 1693 863 armv7m.c:339 armv7m_read_core_reg(): read d8 value 0x0000000000000000
+Debug: 1694 863 armv7m.c:339 armv7m_read_core_reg(): read d9 value 0x0000000000000000
+Debug: 1695 864 armv7m.c:339 armv7m_read_core_reg(): read d10 value 0x0000000000000000
+Debug: 1696 864 armv7m.c:339 armv7m_read_core_reg(): read d11 value 0x0000000000000000
+Debug: 1697 865 armv7m.c:339 armv7m_read_core_reg(): read d12 value 0x0000000000000000
+Debug: 1698 865 armv7m.c:339 armv7m_read_core_reg(): read d13 value 0x0000000000000000
+Debug: 1699 865 armv7m.c:339 armv7m_read_core_reg(): read d14 value 0x0000000000000000
+Debug: 1700 866 armv7m.c:339 armv7m_read_core_reg(): read d15 value 0x0000000000000000
+Debug: 1701 866 armv7m.c:341 armv7m_read_core_reg(): read fpscr value 0x00000000
+Debug: 1702 866 hla_target.c:286 adapter_debug_entry(): entered debug state in core mode: Thread at PC 0x2000002e, target->state: halted
+Debug: 1703 866 target.c:1794 target_call_event_callbacks(): target event 17 (debug-halted) for core stm32f3x.cpu
+Debug: 1704 866 hla_target.c:331 adapter_poll(): halted: PC: 0x2000002e
+Debug: 1705 866 armv7m.c:658 armv7m_wait_algorithm(): restoring register xPSR with value 0x01000000
+Debug: 1706 866 armv7m.c:658 armv7m_wait_algorithm(): restoring register pc with value 0x08000740
+Debug: 1707 866 armv7m.c:658 armv7m_wait_algorithm(): restoring register r6 with value 0x00000000
+Debug: 1708 866 armv7m.c:658 armv7m_wait_algorithm(): restoring register r5 with value 0x00000000
+Debug: 1709 866 armv7m.c:658 armv7m_wait_algorithm(): restoring register r4 with value 0x00000000
+Debug: 1710 866 armv7m.c:658 armv7m_wait_algorithm(): restoring register r3 with value 0x00000000
+Debug: 1711 866 armv7m.c:658 armv7m_wait_algorithm(): restoring register r2 with value 0x00000000
+Debug: 1712 866 armv7m.c:658 armv7m_wait_algorithm(): restoring register r0 with value 0x00000000
+Debug: 1713 866 target.c:2112 target_free_working_area_restore(): freed 52 bytes of working area at address 0x20000000
+Debug: 1714 866 target.c:1909 print_wa_layout():    0x20000000-0x20003fff (16384 bytes)
+Debug: 1715 866 image.c:493 image_elf_read_section(): load segment 1 at 0x0 (sz = 0x1d8)
+Debug: 1716 866 image.c:499 image_elf_read_section(): read elf: size = 0x1d8 at 0x20000
+Debug: 1717 866 image.c:1025 image_calculate_checksum(): Calculating checksum
+Debug: 1718 866 image.c:1055 image_calculate_checksum(): Calculating checksum done
+Debug: 1719 866 target.c:2043 target_alloc_working_area_try(): allocated new working area of 52 bytes at address 0x20000000
+Debug: 1720 866 target.c:1909 print_wa_layout():  * 0x20000000-0x20000033 (52 bytes)
+Debug: 1721 866 target.c:1909 print_wa_layout():    0x20000034-0x20003fff (16332 bytes)
+Debug: 1722 866 target.c:2348 target_write_buffer(): writing buffer of 52 byte at 0x20000000
+Debug: 1723 866 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0x20000000 4 13
+Debug: 1724 867 target.c:1794 target_call_event_callbacks(): target event 3 (resume-start) for core stm32f3x.cpu
+Debug: 1725 867 hla_target.c:449 adapter_resume(): adapter_resume 0 0x20000000 1 1
+Debug: 1726 867 target.c:2644 target_write_u32(): address: 0xe000edfc, value: 0x01000000
+Debug: 1727 867 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe000edfc 4 1
+Debug: 1728 867 armv7m.c:160 armv7m_restore_context():  
+Debug: 1729 867 armv7m.c:405 armv7m_write_core_reg(): write xPSR value 0x01000000
+Debug: 1730 868 armv7m.c:405 armv7m_write_core_reg(): write pc value 0x20000000
+Debug: 1731 868 armv7m.c:405 armv7m_write_core_reg(): write r6 value 0x00000000
+Debug: 1732 868 armv7m.c:405 armv7m_write_core_reg(): write r5 value 0x00000000
+Debug: 1733 869 armv7m.c:405 armv7m_write_core_reg(): write r4 value 0x00000000
+Debug: 1734 869 armv7m.c:405 armv7m_write_core_reg(): write r3 value 0x00000000
+Debug: 1735 869 armv7m.c:405 armv7m_write_core_reg(): write r2 value 0x00000000
+Debug: 1736 870 armv7m.c:405 armv7m_write_core_reg(): write r1 value 0x000001d8
+Debug: 1737 870 armv7m.c:405 armv7m_write_core_reg(): write r0 value 0x080030ac
+Debug: 1738 870 target.c:2644 target_write_u32(): address: 0xe000edf8, value: 0x00000000
+Debug: 1739 870 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe000edf8 4 1
+Debug: 1740 870 target.c:1794 target_call_event_callbacks(): target event 18 (debug-resumed) for core stm32f3x.cpu
+Debug: 1741 870 target.c:1794 target_call_event_callbacks(): target event 4 (resume-end) for core stm32f3x.cpu
+Debug: 1742 871 target.c:3210 target_wait_state(): waiting for target halted...
+Debug: 1743 871 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0xe000edf8 4 1
+Debug: 1744 872 target.c:2556 target_read_u32(): address: 0xe000edf8, value: 0x00000000
+Debug: 1745 872 armv7m.c:341 armv7m_read_core_reg(): read r0 value 0x4149bf6e
+Debug: 1746 872 armv7m.c:341 armv7m_read_core_reg(): read r1 value 0x00000000
+Debug: 1747 872 armv7m.c:341 armv7m_read_core_reg(): read r2 value 0x080030ac
+Debug: 1748 873 armv7m.c:341 armv7m_read_core_reg(): read r3 value 0x000001d8
+Debug: 1749 873 armv7m.c:341 armv7m_read_core_reg(): read r4 value 0x000001d8
+Debug: 1750 873 armv7m.c:341 armv7m_read_core_reg(): read r5 value 0x00000008
+Debug: 1751 873 armv7m.c:341 armv7m_read_core_reg(): read r6 value 0x04c11db7
+Debug: 1752 873 armv7m.c:341 armv7m_read_core_reg(): read r7 value 0x00000000
+Debug: 1753 874 armv7m.c:341 armv7m_read_core_reg(): read r8 value 0x00000000
+Debug: 1754 874 armv7m.c:341 armv7m_read_core_reg(): read r9 value 0x00000000
+Debug: 1755 874 armv7m.c:341 armv7m_read_core_reg(): read r10 value 0x00000000
+Debug: 1756 874 armv7m.c:341 armv7m_read_core_reg(): read r11 value 0x00000000
+Debug: 1757 875 armv7m.c:341 armv7m_read_core_reg(): read r12 value 0x00000000
+Debug: 1758 875 armv7m.c:341 armv7m_read_core_reg(): read sp value 0x20003000
+Debug: 1759 875 armv7m.c:341 armv7m_read_core_reg(): read lr value 0xffffffff
+Debug: 1760 875 armv7m.c:341 armv7m_read_core_reg(): read pc value 0x2000002e
+Debug: 1761 875 armv7m.c:341 armv7m_read_core_reg(): read xPSR value 0x61000000
+Debug: 1762 876 armv7m.c:341 armv7m_read_core_reg(): read msp value 0x20003000
+Debug: 1763 876 armv7m.c:341 armv7m_read_core_reg(): read psp value 0x00000000
+Debug: 1764 876 armv7m.c:341 armv7m_read_core_reg(): read pmsk_bpri_fltmsk_ctrl value 0x00000000
+Debug: 1765 876 armv7m.c:339 armv7m_read_core_reg(): read d0 value 0x0000000000000000
+Debug: 1766 877 armv7m.c:339 armv7m_read_core_reg(): read d1 value 0x0000000000000000
+Debug: 1767 877 armv7m.c:339 armv7m_read_core_reg(): read d2 value 0x0000000000000000
+Debug: 1768 878 armv7m.c:339 armv7m_read_core_reg(): read d3 value 0x0000000000000000
+Debug: 1769 878 armv7m.c:339 armv7m_read_core_reg(): read d4 value 0x0000000000000000
+Debug: 1770 878 armv7m.c:339 armv7m_read_core_reg(): read d5 value 0x0000000000000000
+Debug: 1771 879 armv7m.c:339 armv7m_read_core_reg(): read d6 value 0x0000000000000000
+Debug: 1772 879 armv7m.c:339 armv7m_read_core_reg(): read d7 value 0x0000000000000000
+Debug: 1773 880 armv7m.c:339 armv7m_read_core_reg(): read d8 value 0x0000000000000000
+Debug: 1774 880 armv7m.c:339 armv7m_read_core_reg(): read d9 value 0x0000000000000000
+Debug: 1775 881 armv7m.c:339 armv7m_read_core_reg(): read d10 value 0x0000000000000000
+Debug: 1776 881 armv7m.c:339 armv7m_read_core_reg(): read d11 value 0x0000000000000000
+Debug: 1777 881 armv7m.c:339 armv7m_read_core_reg(): read d12 value 0x0000000000000000
+Debug: 1778 882 armv7m.c:339 armv7m_read_core_reg(): read d13 value 0x0000000000000000
+Debug: 1779 882 armv7m.c:339 armv7m_read_core_reg(): read d14 value 0x0000000000000000
+Debug: 1780 883 armv7m.c:339 armv7m_read_core_reg(): read d15 value 0x0000000000000000
+Debug: 1781 883 armv7m.c:341 armv7m_read_core_reg(): read fpscr value 0x00000000
+Debug: 1782 883 hla_target.c:286 adapter_debug_entry(): entered debug state in core mode: Thread at PC 0x2000002e, target->state: halted
+Debug: 1783 883 target.c:1794 target_call_event_callbacks(): target event 17 (debug-halted) for core stm32f3x.cpu
+Debug: 1784 883 hla_target.c:331 adapter_poll(): halted: PC: 0x2000002e
+Debug: 1785 883 armv7m.c:658 armv7m_wait_algorithm(): restoring register xPSR with value 0x01000000
+Debug: 1786 883 armv7m.c:658 armv7m_wait_algorithm(): restoring register pc with value 0x08000740
+Debug: 1787 883 armv7m.c:658 armv7m_wait_algorithm(): restoring register r6 with value 0x00000000
+Debug: 1788 883 armv7m.c:658 armv7m_wait_algorithm(): restoring register r5 with value 0x00000000
+Debug: 1789 883 armv7m.c:658 armv7m_wait_algorithm(): restoring register r4 with value 0x00000000
+Debug: 1790 883 armv7m.c:658 armv7m_wait_algorithm(): restoring register r3 with value 0x00000000
+Debug: 1791 883 armv7m.c:658 armv7m_wait_algorithm(): restoring register r2 with value 0x00000000
+Debug: 1792 883 armv7m.c:658 armv7m_wait_algorithm(): restoring register r0 with value 0x00000000
+Debug: 1793 883 target.c:2112 target_free_working_area_restore(): freed 52 bytes of working area at address 0x20000000
+Debug: 1794 883 target.c:1909 print_wa_layout():    0x20000000-0x20003fff (16384 bytes)
+Debug: 1795 883 command.c:146 script_debug(): command - echo ** Verified OK **
+User : 1797 883 command.c:769 jim_echo(): ** Verified OK **
+Debug: 1798 883 command.c:146 script_debug(): command - poll off
+Debug: 1800 884 command.c:146 script_debug(): command - echo ** Resetting Target **
+User : 1802 884 command.c:769 jim_echo(): ** Resetting Target **
+Debug: 1803 884 command.c:146 script_debug(): command - reset run
+Debug: 1805 884 target.c:1813 target_call_reset_callbacks(): target reset 1 (run)
+Debug: 1806 884 command.c:146 script_debug(): command - target names
+Debug: 1807 884 command.c:146 script_debug(): command - stm32f3x.cpu invoke-event reset-start
+Debug: 1808 884 target.c:4742 target_handle_event(): target(0): stm32f3x.cpu (hla_target) event: 9 (reset-start) action:  stm32f3x_default_reset_start 
+Debug: 1809 884 command.c:146 script_debug(): command - adapter speed 1000
+Debug: 1811 884 core.c:1822 jtag_config_khz(): handle jtag khz
+Debug: 1812 884 core.c:1785 adapter_khz_to_speed(): convert khz to interface specific speed value
+Debug: 1813 884 core.c:1789 adapter_khz_to_speed(): have interface set up
+Info : 1814 884 stlink_usb.c:2549 stlink_match_speed_map(): Unable to match requested speed 1000 kHz, using 950 kHz
+Debug: 1815 884 core.c:1785 adapter_khz_to_speed(): convert khz to interface specific speed value
+Debug: 1816 884 core.c:1789 adapter_khz_to_speed(): have interface set up
+Info : 1817 884 stlink_usb.c:2549 stlink_match_speed_map(): Unable to match requested speed 1000 kHz, using 950 kHz
+Debug: 1818 884 command.c:146 script_debug(): command - transport select
+Debug: 1819 884 command.c:146 script_debug(): command - transport select
+Debug: 1820 884 command.c:146 script_debug(): command - stm32f3x.cpu invoke-event examine-start
+Debug: 1821 884 command.c:146 script_debug(): command - stm32f3x.cpu arp_examine allow-defer
+Debug: 1822 884 command.c:146 script_debug(): command - stm32f3x.cpu invoke-event examine-end
+Debug: 1823 884 target.c:4742 target_handle_event(): target(0): stm32f3x.cpu (hla_target) event: 21 (examine-end) action:  stm32f3x_default_examine_end 
+Debug: 1824 884 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0xe0042004 4 1
+Debug: 1825 885 command.c:146 script_debug(): command - mww 0xe0042004 7
+Debug: 1827 885 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe0042004 4 1
+Debug: 1828 885 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0xe0042008 4 1
+Debug: 1829 885 command.c:146 script_debug(): command - mww 0xe0042008 6144
+Debug: 1831 885 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe0042008 4 1
+Debug: 1832 886 command.c:146 script_debug(): command - stm32f3x.cpu invoke-event reset-assert-pre
+Debug: 1833 886 command.c:146 script_debug(): command - transport select
+Debug: 1834 886 command.c:146 script_debug(): command - stm32f3x.cpu arp_reset assert 0
+Debug: 1835 886 target.c:2141 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 1836 886 target.c:1909 print_wa_layout():    0x20000000-0x20003fff (16384 bytes)
+Debug: 1837 886 hla_target.c:344 hl_assert_reset(): hl_assert_reset
+Debug: 1838 888 command.c:146 script_debug(): command - stm32f3x.cpu invoke-event reset-assert-post
+Debug: 1839 888 command.c:146 script_debug(): command - stm32f3x.cpu invoke-event reset-deassert-pre
+Debug: 1840 888 command.c:146 script_debug(): command - transport select
+Debug: 1841 888 command.c:146 script_debug(): command - stm32f3x.cpu arp_reset deassert 0
+Debug: 1842 888 target.c:2141 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 1843 888 target.c:1909 print_wa_layout():    0x20000000-0x20003fff (16384 bytes)
+Debug: 1844 888 hla_target.c:403 hl_deassert_reset(): hl_deassert_reset
+Debug: 1845 888 target.c:1794 target_call_event_callbacks(): target event 3 (resume-start) for core stm32f3x.cpu
+Debug: 1846 888 hla_target.c:449 adapter_resume(): adapter_resume 1 0x00000000 0 0
+Debug: 1847 888 target.c:2141 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 1848 888 target.c:1909 print_wa_layout():    0x20000000-0x20003fff (16384 bytes)
+Debug: 1849 888 hla_target.c:602 adapter_read_memory(): adapter_read_memory 0x08000740 2 1
+Debug: 1850 889 target.c:2580 target_read_u16(): address: 0x08000740, value: 0x0000
+Debug: 1851 889 target.c:2644 target_write_u32(): address: 0xe000edfc, value: 0x01000000
+Debug: 1852 889 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe000edfc 4 1
+Debug: 1853 889 armv7m.c:160 armv7m_restore_context():  
+Debug: 1854 889 target.c:2644 target_write_u32(): address: 0xe000edf8, value: 0x00000000
+Debug: 1855 889 hla_target.c:617 adapter_write_memory(): adapter_write_memory 0xe000edf8 4 1
+Debug: 1856 890 target.c:1794 target_call_event_callbacks(): target event 2 (resumed) for core stm32f3x.cpu
+Debug: 1857 890 target.c:1794 target_call_event_callbacks(): target event 4 (resume-end) for core stm32f3x.cpu
+Debug: 1858 890 command.c:146 script_debug(): command - stm32f3x.cpu invoke-event reset-deassert-post
+Debug: 1859 890 command.c:146 script_debug(): command - stm32f3x.cpu invoke-event reset-end
+Debug: 1860 890 command.c:146 script_debug(): command - shutdown
+User : 1862 890 server.c:755 handle_shutdown_command(): shutdown command invoked
+Debug: 1863 890 target.c:2141 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 1864 890 hla_interface.c:117 hl_interface_quit(): hl_interface_quit
+Debug: 1865 890 stlink_usb.c:1323 stlink_usb_exit_mode(): MODE: 0x02
