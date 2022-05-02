@@ -19,6 +19,7 @@ ARCH = /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/arm-none-eabi
 ARM_GNU_CC = $(ARCH)-gcc
 ARCH_CFLAGS = -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
 ARCH_CFLAGS += -mlittle-endian -mthumb
+ARCH_LFLAGS = $(ARCH_CFLAGS) -T $(LDSCRIPT) -Wl,-Map=main.map -Wl,--gc-sections
 
 # Compiler Flags
 CFLAGS  = -g -O3 -ffunction-sections -std=gnu99 -Wall -flto
@@ -128,6 +129,7 @@ main.bin: main.elf
 main.elf: $(OBJECTS) $(LDSCRIPT)
 	$(info ------Linking------)
 	$(CC) $(LFLAGS) -o main.elf $(OBJECTS) -lnosys -lm
+	#$(ARM_GNU_CC) $(ARCH_LFLAGS) -o main.elf $(OBJECTS) -lnosys -lm
 
 %.o: %.c %.h %.s
 	$(CC) $(CFLAGS) -c -o $@ $<
