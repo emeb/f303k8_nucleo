@@ -18,3 +18,10 @@ build dir is clang_test
 linker results from GCC and Clang builds are in the clang_test/link_results dir
 
 debug dumps from attempts to flash w/ OpenOCD are in the clang_test/oocd_debug dir
+
+## Update 05-01-2022
+I found a working example of clang with STM32 here:
+
+https://github.com/piratkin/simple
+
+Comparing the linker script in that example with my own I spotted a few differences. Resolving those has allowed the linker output .elf file to work correctly with OpenOCD and also with objcopy to generate a realistic raw binary file. However, it was necessary to remove references to the CCMRAM section that would allow initialization of code and variables in that area.
