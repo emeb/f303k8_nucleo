@@ -8,27 +8,10 @@ I found  a description here:
 
 https://interrupt.memfault.com/blog/arm-cortexm-with-llvm-clang
 
-This purports to show how to adapt a GCC makefile for Clang. There are some errors and omissions but after a few hours I got it compiling, 
-BUT - upon trying to flash the code I got errors during the flash process, and it turns out that the linker is putting stuff in the wrong places (despite using the same linker script as GCC). Additionally, using objcopy to make a binary results in a 4GB file, so clearly things are screwed up.
+This purports to show how to adapt a GCC makefile for Clang. There are some errors and omissions but after a few hours I got it compiling.
 
-I'm very inexperienced with debugging linker stuff - I mainly have just used Vendor linker scripts with minor tweaks in obvious places so figuring out what went wrong here is way beyond me. I've got .dmp and .map files from both the working GCC build and the failed Clang build but can't see where the errors are. If anyone has any suggestions I'd love to hear them and I can provide any data you'd need to lend a hand.
-
-build dir is clang_test
-
-linker results from GCC and Clang builds are in the clang_test/link_results dir
-
-debug dumps from attempts to flash w/ OpenOCD are in the clang_test/oocd_debug dir
-
-## Update 05-01-2022
-I found a working example of clang with STM32 here:
-
-https://github.com/piratkin/simple
-
-Comparing the linker script in that example with my own I spotted a few differences. Resolving those has allowed the linker output .elf file to work correctly with OpenOCD and also with objcopy to generate a realistic raw binary file. However, it was necessary to remove references to the CCMRAM section that would allow initialization of code and variables in that area.
-
-## Benchmarking 05-04-2022
-Having gotten the open-source Clang working, I began doing some benchmarks between it and several versions of GCC. The results were interesting and not
-quite aligned with what I'd been told about the relative performance of the two toolchains so I wanted to try a proprietary build of Clang as well. I signed up for a 30-day trial of the ARM Development Studio which provides version 6.18 of their Clang-based toolchain and got that working as well. This yeilded the following results:
+## Benchmarking
+Having gotten the open-source Clang working, I began doing some benchmarks between it and several versions of GCC using a toy DSP application that's typical of the sort of thing I do in my day-to-day work. The results were interesting and not quite aligned with what I'd been told about the relative performance of the two toolchains so I wanted to try a proprietary build of Clang as well. I signed up for a 30-day trial of the ARM Development Studio which provides version 6.18 of their Clang-based toolchain and got that working as well. This yielded the following results:
 
 <img src="doc/compiler_comparison_chart.png" width="640" />
 <img src="doc/load_chart.png" width="640" />
