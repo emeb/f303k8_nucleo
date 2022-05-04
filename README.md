@@ -30,13 +30,13 @@ Comparing the linker script in that example with my own I spotted a few differen
 Having gotten the open-source Clang working, I began doing some benchmarks between it and several versions of GCC. The results were interesting and not
 quite aligned with what I'd been told about the relative performance of the two toolchains so I wanted to try a proprietary build of Clang as well. I signed up for a 30-day trial of the ARM Development Studio which provides version 6.18 of their Clang-based toolchain and got that working as well. This yeilded the following results:
 
-<img src="docs/compiler_comparison_chart.png" width="640" />
-<img src="docs/load_chart.png" width="640" />
-<img src="docs/size_chart.png" width="640" />
+<img src="doc/compiler_comparison_chart.png" width="640" />
+<img src="doc/load_chart.png" width="640" />
+<img src="doc/size_chart.png" width="640" />
 
 ### Notes
 * This example is a simple audio DSP application running on an STM32F303K8 MCU with three channels of noise processed through a hardware floating point 4th-order filter model and streamed out to on-chip DACs via DMA. Sample rate is roughly 48ksps and the CPU is running at 64MHz clock rate.
-* CPU load is computed by using the Cortex M4 cycle counter to measure the duration of the DMA buffer ISR. Time between IRQs is the period and duty cycle of the DSP is computed by sampling the start and end cycle counts. 100% load means that the DSP ISR is using all avaliable CPU cycles, so lower numbers indicate more efficient computations.
+* CPU load is computed by using the Cortex M4 cycle counter to measure the duration of the DMA buffer ISR. Time between IRQs is the period and duty cycle of the DSP is computed by sampling the start and end cycle counts. There are no significant I/O operations taking place during the measured time, only operatons to on-board SRAM. 100% load means that the DSP ISR is using all avaliable CPU cycles, so lower numbers indicate more efficient computations.
 * Size is just the raw binary size of the full embedded application, including setup code.
 * GCC does not have an -Oz setting so those values are left blank.
 * I had posted some earlier results that were run at a slightly lower sample rate and thus had lower overall CPU load percentages. If you notice any differences between these results and the earlier ones it's caused by that change.
