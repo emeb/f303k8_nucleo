@@ -1,0 +1,273 @@
+     VMA      LMA     Size Align Out     In      Symbol
+       0        0        0     1 _estack = 0x20003000
+       0        0        0     1 _Min_Heap_Size = 0x200
+       0        0        0     1 _Min_Stack_Size = 0x400
+ 8000000  8000000      188     1 .isr_vector
+ 8000000  8000000        0     1         . = ALIGN ( 4 )
+ 8000000  8000000      188     1         startup_stm32f303x8.o:(.isr_vector)
+ 8000000  8000000        0     1                 g_pfnVectors
+ 8000188  8000188        0     1         . = ALIGN ( 4 )
+ 8000188  8000188     4a28     4 .text
+ 8000188  8000188        0     1         . = ALIGN ( 4 )
+ 8000188  8000188      224     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../arm-none-eabi/lib/libc.a(lib_a-strcmp.o):(.text)
+ 8000188  8000188        0     1                 $a
+ 8000188  8000188      224     1                 strcmp
+ 80003ac  80003ac       24     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivsi3.o):(.text)
+ 80003ac  80003ac        0     1                 $t
+ 80003ad  80003ad       14     1                 __udivsi3
+ 80003ad  80003ad        0     1                 __aeabi_uidiv
+ 80003c1  80003c1       10     1                 __aeabi_uidivmod
+ 80003d0  80003d0        4     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o):(.text)
+ 80003d0  80003d0        0     1                 $t
+ 80003d1  80003d1        2     1                 __aeabi_idiv0
+ 80003d1  80003d1        2     1                 __aeabi_ldiv0
+ 80003d4  80003d4       a0     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_ldivmod.o):(.text)
+ 80003d4  80003d4        0     1                 $t
+ 80003d5  80003d5        0     1                 __aeabi_ldivmod
+ 8000474  8000474      2cc     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o):(.text)
+ 8000474  8000474        0     1                 $t
+ 8000475  8000475      2cc     1                 __udivmoddi4
+ 8000740  8000740       4c     4         startup_stm32f303x8.o:(.text.Reset_Handler)
+ 8000740  8000740        0     1                 $t.0
+ 8000741  8000741       34     1                 Reset_Handler
+ 800074e  800074e        0     1                 CopyDataInit
+ 8000754  8000754        0     1                 LoopCopyDataInit
+ 8000762  8000762        0     1                 FillZerobss
+ 8000766  8000766        0     1                 LoopFillZerobss
+ 8000772  8000772        0     1                 LoopForever
+ 8000774  8000774        0     1                 $d.2
+ 800078c  800078c        2     1         startup_stm32f303x8.o:(.text.Default_Handler)
+ 800078c  800078c        0     1                 $t.1
+ 800078c  800078c        0     1                 Infinite_Loop
+ 800078c  800078c        2     1                 Default_Handler
+ 800078d  800078d        2     1                 ADC1_2_IRQHandler
+ 800078d  800078d        2     1                 BusFault_Handler
+ 800078d  800078d        2     1                 CAN_RX0_IRQHandler
+ 800078d  800078d        2     1                 CAN_RX1_IRQHandler
+ 800078d  800078d        2     1                 CAN_SCE_IRQHandler
+ 800078d  800078d        2     1                 CAN_TX_IRQHandler
+ 800078d  800078d        2     1                 COMP2_IRQHandler
+ 800078d  800078d        2     1                 COMP4_6_IRQHandler
+ 800078d  800078d        2     1                 DMA1_Channel1_IRQHandler
+ 800078d  800078d        2     1                 DMA1_Channel2_IRQHandler
+ 800078d  800078d        2     1                 DMA1_Channel3_IRQHandler
+ 800078d  800078d        2     1                 DMA1_Channel4_IRQHandler
+ 800078d  800078d        2     1                 DMA1_Channel5_IRQHandler
+ 800078d  800078d        2     1                 DMA1_Channel6_IRQHandler
+ 800078d  800078d        2     1                 DMA1_Channel7_IRQHandler
+ 800078d  800078d        2     1                 DebugMon_Handler
+ 800078d  800078d        2     1                 EXTI0_IRQHandler
+ 800078d  800078d        2     1                 EXTI15_10_IRQHandler
+ 800078d  800078d        2     1                 EXTI1_IRQHandler
+ 800078d  800078d        2     1                 EXTI2_TSC_IRQHandler
+ 800078d  800078d        2     1                 EXTI3_IRQHandler
+ 800078d  800078d        2     1                 EXTI4_IRQHandler
+ 800078d  800078d        2     1                 EXTI9_5_IRQHandler
+ 800078d  800078d        2     1                 FLASH_IRQHandler
+ 800078d  800078d        2     1                 FPU_IRQHandler
+ 800078d  800078d        2     1                 HardFault_Handler
+ 800078d  800078d        2     1                 I2C1_ER_IRQHandler
+ 800078d  800078d        2     1                 I2C1_EV_IRQHandler
+ 800078d  800078d        2     1                 MemManage_Handler
+ 800078d  800078d        2     1                 NMI_Handler
+ 800078d  800078d        2     1                 PVD_IRQHandler
+ 800078d  800078d        2     1                 PendSV_Handler
+ 800078d  800078d        2     1                 RCC_IRQHandler
+ 800078d  800078d        2     1                 RTC_Alarm_IRQHandler
+ 800078d  800078d        2     1                 RTC_WKUP_IRQHandler
+ 800078d  800078d        2     1                 SPI1_IRQHandler
+ 800078d  800078d        2     1                 SVC_Handler
+ 800078d  800078d        2     1                 TAMP_STAMP_IRQHandler
+ 800078d  800078d        2     1                 TIM1_BRK_TIM15_IRQHandler
+ 800078d  800078d        2     1                 TIM1_CC_IRQHandler
+ 800078d  800078d        2     1                 TIM1_TRG_COM_TIM17_IRQHandler
+ 800078d  800078d        2     1                 TIM1_UP_TIM16_IRQHandler
+ 800078d  800078d        2     1                 TIM2_IRQHandler
+ 800078d  800078d        2     1                 TIM3_IRQHandler
+ 800078d  800078d        2     1                 TIM6_DAC1_IRQHandler
+ 800078d  800078d        2     1                 TIM7_DAC2_IRQHandler
+ 800078d  800078d        2     1                 USART1_IRQHandler
+ 800078d  800078d        2     1                 USART3_IRQHandler
+ 800078d  800078d        2     1                 UsageFault_Handler
+ 800078d  800078d        2     1                 WWDG_IRQHandler
+ 8000790  8000790       24     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../arm-none-eabi/lib/libc.a(lib_a-strtok.o):(.text.strtok)
+ 8000790  8000790        0     1                 $a
+ 8000790  8000790       24     1                 strtok
+ 80007b0  80007b0        0     1                 $d
+ 80007b4  80007b4       c0     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../arm-none-eabi/lib/libc.a(lib_a-strtok_r.o):(.text.__strtok_r)
+ 80007b4  80007b4        0     1                 $a
+ 80007b4  80007b4       c0     1                 __strtok_r
+ 8000874  8000874      1cc     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../arm-none-eabi/lib/libc.a(lib_a-strtoul.o):(.text._strtoul_l.isra.0)
+ 8000874  8000874        0     1                 $a
+ 8000874  8000874      1cc     1                 _strtoul_l.isra.0
+ 8000a3c  8000a3c        0     1                 $d
+ 8000a40  8000a40       4c     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../arm-none-eabi/lib/libc.a(lib_a-strtoul.o):(.text.strtoul)
+ 8000a40  8000a40        0     1                 $a
+ 8000a40  8000a40       4c     1                 strtoul
+ 8000a84  8000a84        0     1                 $d
+ 8000a8c  8000a8c        8     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../arm-none-eabi/lib/libc.a(lib_a-locale.o):(.text.__locale_ctype_ptr_l)
+ 8000a8c  8000a8c        0     1                 $a
+ 8000a8c  8000a8c        8     1                 __locale_ctype_ptr_l
+ 8000a94  8000a94       28     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../arm-none-eabi/lib/libc.a(lib_a-wctomb_r.o):(.text.__ascii_wctomb)
+ 8000a94  8000a94        0     1                 $a
+ 8000a94  8000a94       28     1                 __ascii_wctomb
+ 8000abc  8000abc       44     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../arm-none-eabi/lib/libc.a(lib_a-mbtowc_r.o):(.text.__ascii_mbtowc)
+ 8000abc  8000abc        0     1                 $a
+ 8000abc  8000abc       44     1                 __ascii_mbtowc
+ 8000b00  8000b00       12     2         lto.tmp:(.text.SystemInit)
+ 8000b00  8000b00        0     1                 $t.0
+ 8000b01  8000b01       12     1                 SystemInit
+ 8000b14  8000b14     1810     4         lto.tmp:(.text.main)
+ 8000b14  8000b14        0     1                 $t.1
+ 8000b15  8000b15     1810     1                 main
+ 8002324  8002324       10     2         lto.tmp:(.text.SysTick_Handler)
+ 8002324  8002324        0     1                 $t.2
+ 8002325  8002325       10     1                 SysTick_Handler
+ 8002334  8002334      7fc     4         lto.tmp:(.text.tfp_printf)
+ 8002334  8002334        0     1                 $t.3
+ 8002335  8002335      7fc     1                 tfp_printf
+ 80023f0  80023f0        0     1                 $d.4
+ 8002412  8002412        0     1                 $t.5
+ 8002b30  8002b30       30     2         lto.tmp:(.text.usart_putc)
+ 8002b30  8002b30        0     1                 $t.6
+ 8002b31  8002b31       30     1                 usart_putc
+ 8002b60  8002b60       66     2         lto.tmp:(.text.USART2_IRQHandler)
+ 8002b60  8002b60        0     1                 $t.7
+ 8002b61  8002b61       66     1                 USART2_IRQHandler
+ 8002bc6  8002bc6       f6     2         lto.tmp:(.text.R820T2_i2c_write_cache_mask)
+ 8002bc6  8002bc6        0     1                 $t.8
+ 8002bc7  8002bc7       f6     1                 R820T2_i2c_write_cache_mask
+ 8002cbc  8002cbc      5f8     4         lto.tmp:(.text.R820T2_i2c_read_raw)
+ 8002cbc  8002cbc        0     1                 $t.9
+ 8002cbd  8002cbd      5f8     1                 R820T2_i2c_read_raw
+ 80032b4  80032b4      528     2         lto.tmp:(.text.R820T2_set_pll)
+ 80032b4  80032b4        0     1                 $t.10
+ 80032b5  80032b5      528     1                 R820T2_set_pll
+ 80037dc  80037dc      1ba     4         lto.tmp:(.text.R820T2_set_freq)
+ 80037dc  80037dc        0     1                 $t.11
+ 80037dd  80037dd      1ba     1                 R820T2_set_freq
+ 8003998  8003998      56a     4         lto.tmp:(.text.R820T2_init)
+ 8003998  8003998        0     1                 $t.12
+ 8003999  8003999      56a     1                 R820T2_init
+ 8003f04  8003f04      208     4         lto.tmp:(.text.HAL_GPIO_Init)
+ 8003f04  8003f04        0     1                 $t.13
+ 8003f05  8003f05      208     1                 HAL_GPIO_Init
+ 800410c  800410c       f0     4         lto.tmp:(.text.UART_WaitOnFlagUntilTimeout)
+ 800410c  800410c        0     1                 $t.14
+ 800410d  800410d       f0     1                 UART_WaitOnFlagUntilTimeout
+ 80041fc  80041fc      336     4         lto.tmp:(.text.HAL_I2C_Master_Transmit)
+ 80041fc  80041fc        0     1                 $t.15
+ 80041fd  80041fd      336     1                 HAL_I2C_Master_Transmit
+ 8004534  8004534        5     4         <internal>:(.text)
+ 800453c  800453c      101     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../arm-none-eabi/lib/libc.a(lib_a-ctype_.o):(.rodata._ctype_)
+ 800453c  800453c        0     1                 $d
+ 800453c  800453c      101     1                 _ctype_
+ 800463d  800463d       40     1         <internal>:(.text)
+ 800467d  800467d        8     1         <internal>:(.text)
+ 8004685  8004685      48d     1         <internal>:(.text)
+ 8004b12  8004b12       7e     2         lto.tmp:(.rodata.freq_ranges)
+ 8004b12  8004b12       7e     1                 freq_ranges
+ 8004b90  8004b90       20     1         <internal>:(.text)
+ 8004bb0  8004bb0        0     1         . = ALIGN ( 4 )
+ 8004bb0  8004bb0        0     1         _etext = .
+ 8004bb0  8004bb0        0     1         _exit = .
+ 8004bb0  8004bb0       10     4 .ARM
+ 8004bb0  8004bb0        0     1         __exidx_start = .
+ 8004bb0  8004bb0       10     4         <internal>:(.ARM.exidx)
+ 8004bc0  8004bc0        0     1         __exidx_end = .
+ 8004bc0  8004bc0        0     1 _sidata = .
+20000000  8004bc0      5a0     8 .data
+20000000  8004bc0        0     1         . = ALIGN ( 4 )
+20000000  8004bc0        0     1         _sdata = .
+20000000  8004bc0        4     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../arm-none-eabi/lib/libc.a(lib_a-impure.o):(.data._impure_ptr)
+20000000  8004bc0        0     1                 $d
+20000000  8004bc0        4     1                 _impure_ptr
+20000008  8004bc8      428     8         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../arm-none-eabi/lib/libc.a(lib_a-impure.o):(.data.impure_data)
+20000008  8004bc8      428     1                 impure_data
+20000008  8004bc8        0     1                 $d
+20000430  8004ff0      16c     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../arm-none-eabi/lib/libc.a(lib_a-locale.o):(.data.__global_locale)
+20000430  8004ff0        0     1                 $d
+20000430  8004ff0      16c     1                 __global_locale
+2000059c  800515c        4     4         lto.tmp:(.data.SystemCoreClock)
+2000059c  800515c        4     1                 SystemCoreClock
+200005a0  8005160        0     1         . = ALIGN ( 4 )
+200005a0  8005160        0     1         _edata = .
+200005a0  8005160        0     1 . = ALIGN ( 4 )
+200005a0  8005160      268     4 .bss
+200005a0  8005160        0     1         _sbss = .
+200005a0  8005160        0     1         __bss_start__ = _sbss
+200005a0  8005160       84     4         lto.tmp:(.bss.huart2)
+200005a0  8005160       84     1                 huart2
+20000624  80051e4      100     1         lto.tmp:(.bss.RX_buffer)
+20000624  80051e4      100     1                 RX_buffer
+20000724  80052e4        4     4         lto.tmp:(.bss.RX_wptr)
+20000724  80052e4        4     1                 RX_wptr
+20000728  80052e8        4     4         lto.tmp:(.bss.RX_rptr)
+20000728  80052e8        4     1                 RX_rptr
+2000072c  80052ec       50     1         lto.tmp:(.bss.cmd_buffer)
+2000072c  80052ec       50     1                 cmd_buffer
+2000077c  800533c        4     4         lto.tmp:(.bss.cmd_wptr)
+2000077c  800533c        4     1                 cmd_wptr
+20000780  8005340       20     1         lto.tmp:(.bss.r820t_regs)
+20000780  8005340       20     1                 r820t_regs
+200007a0  8005360       54     4         lto.tmp:(.bss.hi2c1)
+200007a0  8005360       54     1                 hi2c1
+200007f4  80053b4        1     4         lto.tmp:(.bss.r820t_xtal_freq)
+200007f4  80053b4        1     1                 r820t_xtal_freq
+200007f8  80053b8        1     4         lto.tmp:(.bss.r820t_if_freq)
+200007f8  80053b8        1     1                 r820t_if_freq
+200007fc  80053bc        4     4         lto.tmp:(.bss.r820t_freq)
+200007fc  80053bc        4     1                 r820t_freq
+20000800  80053c0        1     4         lto.tmp:(.bss.uwTickPrio)
+20000800  80053c0        1     1                 uwTickPrio
+20000804  80053c4        4     4         lto.tmp:(.bss.uwTick)
+20000804  80053c4        4     1                 uwTick
+20000808  80053c8        0     1         . = ALIGN ( 4 )
+20000808  80053c8        0     1         _ebss = .
+20000808  80053c8        0     1         __bss_end__ = _ebss
+20000808  80053c8      600     1 ._user_heap_stack
+20000808  80053c8        0     1         . = ALIGN ( 8 )
+20000808  80053c8      200     1         . = . + _Min_Heap_Size
+20000a08  80055c8      400     1         . = . + _Min_Stack_Size
+20000e08  80059c8        0     1         . = ALIGN ( 8 )
+       0        0       29     1 .ARM.attributes
+       0        0       29     1         startup_stm32f303x8.o:(.ARM.attributes)
+       0        0     71a0     1 .debug_info
+       0        0      16d     1         startup_stm32f303x8.o:(.debug_info)
+     16d      16d     7033     1         lto.tmp:(.debug_info)
+       0        0      64c     1 .debug_abbrev
+       0        0       1f     1         startup_stm32f303x8.o:(.debug_abbrev)
+      1f       1f      62d     1         lto.tmp:(.debug_abbrev)
+       0        0       28     1 .debug_aranges
+       0        0       28     1         startup_stm32f303x8.o:(.debug_aranges)
+       0        0      f30     1 .debug_ranges
+       0        0       28     1         startup_stm32f303x8.o:(.debug_ranges)
+      28       28      f08     1         lto.tmp:(.debug_ranges)
+       0        0     40f6     1 .debug_line
+       0        0       75     1         startup_stm32f303x8.o:(.debug_line)
+      75       75     4081     1         lto.tmp:(.debug_line)
+       0        0      4c8     4 .debug_frame
+       0        0       2c     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../arm-none-eabi/lib/libc.a(lib_a-strtok.o):(.debug_frame)
+      2c       2c       48     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../arm-none-eabi/lib/libc.a(lib_a-strtok_r.o):(.debug_frame)
+      74       74       40     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../arm-none-eabi/lib/libc.a(lib_a-strcmp.o):(.debug_frame)
+      b4       b4       a8     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../arm-none-eabi/lib/libc.a(lib_a-strtoul.o):(.debug_frame)
+     15c      15c       20     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivsi3.o):(.debug_frame)
+     16c      16c        0     1                 $d
+     17c      17c       70     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../arm-none-eabi/lib/libc.a(lib_a-locale.o):(.debug_frame)
+     1ec      1ec       3c     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../arm-none-eabi/lib/libc.a(lib_a-wctomb_r.o):(.debug_frame)
+     228      228       48     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../arm-none-eabi/lib/libc.a(lib_a-mbtowc_r.o):(.debug_frame)
+     270      270       44     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_ldivmod.o):(.debug_frame)
+     2b4      2b4       34     4         /opt/launchpad/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o):(.debug_frame)
+     2e8      2e8      1e0     4         lto.tmp:(.debug_frame)
+       0        0     3c95     1 .debug_loc
+       0        0     3c95     1         lto.tmp:(.debug_loc)
+       0        0     1c84     1 .debug_str
+       0        0     1c84     1         <internal>:(.debug_str)
+       0        0       40     1 .comment
+       0        0       40     1         <internal>:(.comment)
+       0        0      b30     4 .symtab
+       0        0      b30     4         <internal>:(.symtab)
+       0        0       ce     1 .shstrtab
+       0        0       ce     1         <internal>:(.shstrtab)
+       0        0      877     1 .strtab
+       0        0      877     1         <internal>:(.strtab)

@@ -1,0 +1,16 @@
+; Copyright (c) 2012 Arm Limited (or its affiliates). All rights reserved.
+; Use, modification and redistribution of this file is subject to your possession of a
+; valid End User License Agreement for the Arm Product of which these examples are part of 
+; and your compliance with all applicable terms and conditions of such licence agreement.
+
+LR_IROM1 0x08000000 0x00080000  {    ; load region size_region
+  ER_IROM1 0x08000000 0x0010000  {  ; load address = execution address
+   *.o (RESET, +First)
+   *(InRoot$$Sections)
+   .ANY (+RO)
+  }
+  RW_IRAM1 0x20000000 0x00003000  {  ; RW data
+   .ANY (+RW +ZI)
+  }
+}
+
