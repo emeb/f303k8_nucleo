@@ -17,13 +17,13 @@ OBJECTS =   startup_stm32f303x8_arm.o system_stm32f3xx.o main.o printf.o \
 LDSCRIPT = scatter.scat
 
 # Compiler Flags
-CFLAGS  = -g -O0 -std=gnu99 -Wall
+CFLAGS  = -g -O0 -std=gnu99 -Wall -flto
 CFLAGS += -I. -I../CMSIS -I../HAL -I../common -I /home/ericb/developmentstudio-2022.0/sw/ARMCompiler6.18/include/
 CFLAGS += -DARM_MATH_CM4 -DUSE_HAL_DRIVER -D'__FPU_USED=1'
 CFLAGS += -DSTM32F303x8 -D'HSE_VALUE=((uint32_t)8000000)'
 CFLAGS += -mlittle-endian -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 --target=arm-arm-none-eabi
-AFLAGS  = -mlittle-endian -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 --target=arm-arm-none-eabi -masm=auto
-LFLAGS  = --scatter=scatter.scat --info=totals --info=unused
+AFLAGS  = -mlittle-endian -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 --target=arm-arm-none-eabi -masm=auto -flto
+LFLAGS  = --scatter=scatter.scat --info=totals --info=unused --lto
 CPFLAGS = 
 
 # Executables

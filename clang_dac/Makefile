@@ -27,7 +27,7 @@ ARCH_LFLAGS = $(ARCH_CFLAGS) -T $(LDSCRIPT) -Wl,-Map=main.map -Wl,--gc-sections
 CLANG = /usr/bin/clang
 
 # Compiler Flags
-CFLAGS  = -g -Os -ffunction-sections -std=gnu99 -Wall -flto
+CFLAGS  = -g -Ofast -ffunction-sections -std=gnu99 -Wall -flto
 CFLAGS += -I. -I../CMSIS -I../HAL -I../common
 CFLAGS += -DARM_MATH_CM4 -DUSE_HAL_DRIVER
 CFLAGS += -DSTM32F303x8 -D'HSE_VALUE=((uint32_t)8000000)'
@@ -133,7 +133,6 @@ main.bin: main.elf
 main.elf: $(OBJECTS) $(LDSCRIPT)
 	$(info ------Linking------)
 	$(CC) $(LFLAGS) -o main.elf $(OBJECTS) -lnosys -lm
-	#$(ARM_GNU_CC) $(ARCH_LFLAGS) -o main.elf $(OBJECTS) -lnosys -lm
 
 %.o: %.c %.h %.s
 	$(CC) $(CFLAGS) -c -o $@ $<

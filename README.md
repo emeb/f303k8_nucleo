@@ -23,6 +23,7 @@ Having gotten the open-source Clang working, I began doing some benchmarks betwe
 * Size is just the raw binary size of the full embedded application, including setup code.
 * GCC does not have an -Oz setting so those values are left blank.
 * I had posted some earlier results that were run at a slightly lower sample rate and thus had lower overall CPU load percentages. If you notice any differences between these results and the earlier ones it's caused by that change.
+* An earlier version of this benchmark neglected to enable Link Time Optimization on the ARM Clang runs. Adding that made little difference in the load but reduced the size somewhat.
 
 ## Summary
-Based on this one example it appears that recent builds of GCC are not grossly out of line with the performance of Clang in both the free and proprietary flavors. For all levels of optimization greater than -O0 GCC performs roughly as well if not better than either version of Clang. This test also shows very little difference between the free and proprietary versions of Clang.
+Based on this one example it appears that recent builds of GCC are not grossly out of line with the performance of Clang in both the free and proprietary flavors. For all levels of optimization greater than -O0 GCC performs roughly as well if not better than either version of Clang. This test also shows very little difference in CPU load between the free and proprietary versions of Clang, although LTO did reduce the binary size of the ARM Clang output.
