@@ -33,3 +33,7 @@ This example code is a stripped-down demonstration of how it's done. A few highl
   - A loader function that copies the functions from Flash to CCMRAM
 
 That's all there is to it. You can make it fancier with structures that combine the function pointers with the location / size info, but this is all that's really needed.
+
+## Going Further
+
+This example is a simple case where the overlay code is stored in on-chip flash (or in an off-chip XIP area that's mapped into the memory space) and can be included in the binary that's programmed along with the primary code. There are many use-cases where one might want to store the overlay code in off-chip flash that's separate and this will require further fiddling with the build process to filter the overlays from the main code. An example of this can be found [in this GitHub repository](https://github.com/Apress/Beg-STM32-Devel-FreeRTOS-libopencm3-GCC/tree/master/rtos/overlay1)
